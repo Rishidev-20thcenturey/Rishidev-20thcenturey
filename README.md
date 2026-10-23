@@ -3,9 +3,9 @@
   Activate by keeping this file as README.md in the PUBLIC repository named
   exactly: Rishidev-20thcenturey
 
-  Artwork lives in ./assets and is generated, never hand-edited:
+  Every piece of artwork in ./assets is generated — never hand-edited:
     python3 tools/gen_hero.py        -> assets/profile-hero.svg
-    python3 tools/gen_assets.py      -> assets/header-*.svg
+    python3 tools/gen_assets.py      -> assets/header-*.svg, divider.svg, terminal.svg
 -->
 
 <p align="center">
@@ -40,11 +40,9 @@
   </sub>
 </p>
 
-<br />
+<p align="center"><img src="assets/divider.svg" width="100%" height="14" alt="" /></p>
 
-<p align="center">
-  <img src="assets/header-about.svg" alt="About me" width="290" />
-</p>
+<img src="assets/header-01-about.svg" alt="Section 01: About me" width="470" />
 
 <table width="100%">
   <tr>
@@ -61,7 +59,6 @@
         CI that runs, and deployments I can point at. I prefer systems I can explain end to end and
         claims I can back with evidence.
       </p>
-      <p><em>Build carefully. Measure honestly. Keep shipping.</em></p>
     </td>
     <td width="42%" valign="top">
       <h3>Quick facts</h3>
@@ -78,26 +75,43 @@
   </tr>
 </table>
 
-<br />
+<p align="center"><img src="assets/divider.svg" width="100%" height="14" alt="" /></p>
+
+<img src="assets/header-02-how.svg" alt="Section 02: How I work" width="500" />
 
 <p align="center">
-  <img src="assets/header-stack.svg" alt="Tech stack" width="330" />
+  <img src="assets/terminal.svg" alt="An animated terminal that types out whoami, my current focus areas, and a status line: build carefully, measure honestly, keep shipping, status open to collaborate" width="100%" />
 </p>
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=python,pytorch,tensorflow,jupyter,opencv,huggingface&theme=dark" alt="Python, PyTorch, TensorFlow, Jupyter, OpenCV and Hugging Face" />
-</p>
-<p align="center"><sub><strong>AI / ML</strong> — modelling, training loops, evaluation, notebooks, artifact management</sub></p>
+> [!NOTE]
+> **I would rather show you the failure than oversell the result.**
+> Most of what I build is measured against a baseline I can defend, and written up whether or not it
+> worked. A model that produces beautiful colour but broken geometry gets described as exactly that —
+> not as a breakthrough. If we work together, you will always know which state a thing is in.
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=ts,js,react,vite,nodejs,express,threejs,nextjs,html,css&theme=dark" alt="TypeScript, JavaScript, React, Vite, Node.js, Express, Three.js, Next.js, HTML and CSS" />
-</p>
-<p align="center"><sub><strong>Web / realtime</strong> — typed frontends, APIs, WebSockets, 3D in the browser</sub></p>
+<p align="center"><img src="assets/divider.svg" width="100%" height="14" alt="" /></p>
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=postgres,mysql,redis,docker,git,github,githubactions,linux,bash,vscode&theme=dark" alt="PostgreSQL, MySQL, Redis, Docker, Git, GitHub, GitHub Actions, Linux, Bash and VS Code" />
-</p>
-<p align="center"><sub><strong>Data / platform</strong> — schemas, CI, containers, deployment, reproducibility</sub></p>
+<img src="assets/header-03-stack.svg" alt="Section 03: Tech stack" width="480" />
+
+<table width="100%">
+  <tr>
+    <td width="34%" valign="top" align="center">
+      <sub><strong>AI / ML</strong></sub><br />
+      <sub>modelling · training loops · evaluation · notebooks · artifacts</sub><br /><br />
+      <img src="https://skillicons.dev/icons?i=python,pytorch,tensorflow,jupyter,opencv,huggingface&theme=dark&perline=3" alt="Python, PyTorch, TensorFlow, Jupyter, OpenCV and Hugging Face" />
+    </td>
+    <td width="33%" valign="top" align="center">
+      <sub><strong>WEB / REALTIME</strong></sub><br />
+      <sub>typed frontends · APIs · WebSockets · 3D in the browser</sub><br /><br />
+      <img src="https://skillicons.dev/icons?i=ts,js,react,vite,nodejs,express,threejs,html,css&theme=dark&perline=3" alt="TypeScript, JavaScript, React, Vite, Node.js, Express, Three.js, HTML and CSS" />
+    </td>
+    <td width="33%" valign="top" align="center">
+      <sub><strong>DATA / PLATFORM</strong></sub><br />
+      <sub>schemas · CI · containers · deployment · reproducibility</sub><br /><br />
+      <img src="https://skillicons.dev/icons?i=postgres,mysql,redis,docker,git,github,githubactions,linux,bash&theme=dark&perline=3" alt="PostgreSQL, MySQL, Redis, Docker, Git, GitHub, GitHub Actions, Linux and Bash" />
+    </td>
+  </tr>
+</table>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Generative%20Models-diffusion%20%C2%B7%20transformers-7C3AED?style=flat-square" alt="Generative models: diffusion and transformers" />
@@ -108,11 +122,9 @@
   <img src="https://img.shields.io/badge/Low--Compute%20Research-resourceful%20by%20design-B03060?style=flat-square" alt="Low-compute research, resourceful by design" />
 </p>
 
-<br />
+<p align="center"><img src="assets/divider.svg" width="100%" height="14" alt="" /></p>
 
-<p align="center">
-  <img src="assets/header-activity.svg" alt="GitHub activity" width="420" />
-</p>
+<img src="assets/header-04-activity.svg" alt="Section 04: GitHub activity" width="540" />
 
 <p align="center">
   <img height="168" src="https://github-readme-stats.vercel.app/api?username=Rishidev-20thcenturey&show_icons=true&include_all_commits=true&count_private=true&rank_icon=github&theme=tokyonight&hide_border=true" alt="GitHub statistics for Rishidev-20thcenturey" />
@@ -120,15 +132,11 @@
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=Rishidev-20thcenturey&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D" alt="GitHub contribution streak" width="80%" />
-</p>
-
-<p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Rishidev-20thcenturey&theme=tokyonight" alt="Contribution profile details and activity over time" width="100%" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Rishidev-20thcenturey&theme=tokyo-night&hide_border=true&area=true&custom_title=Contribution%20graph" alt="Contribution activity graph" width="100%" />
+  <img src="https://streak-stats.demolab.com?user=Rishidev-20thcenturey&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D" alt="GitHub contribution streak" width="82%" />
 </p>
 
 <p align="center">
@@ -137,11 +145,9 @@
 
 <sub align="center">Activity cards come from third-party services and can be briefly unavailable, delayed or rate-limited. Counts are dynamic — GitHub itself is always the source of truth.</sub>
 
-<br />
+<p align="center"><img src="assets/divider.svg" width="100%" height="14" alt="" /></p>
 
-<p align="center">
-  <img src="assets/header-collaborate.svg" alt="Let's collaborate" width="440" />
-</p>
+<img src="assets/header-05-collaborate.svg" alt="Section 05: Let's collaborate" width="600" />
 
 <table width="100%">
   <tr>
@@ -164,6 +170,10 @@
   <a href="mailto:rishirajc406@gmail.com"><img src="https://img.shields.io/badge/Work%20with%20me-send%20an%20email-7C3AED?style=for-the-badge&logo=gmail&logoColor=white" alt="Send an email to work together" /></a>
   <a href="https://github.com/Rishidev-20thcenturey?tab=repositories"><img src="https://img.shields.io/badge/Browse%20my%20work-public%20repositories-181717?style=for-the-badge&logo=github&logoColor=white" alt="Browse public repositories" /></a>
   <a href="https://huggingface.co/Rishix500"><img src="https://img.shields.io/badge/Model%20work-%40Rishix500-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="Hugging Face profile" /></a>
+</p>
+
+<p align="center">
+  <i>Build carefully. Measure honestly. Keep shipping.</i>
 </p>
 
 <p align="center">

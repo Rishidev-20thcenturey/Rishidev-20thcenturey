@@ -9,6 +9,7 @@ from pathlib import Path
 from xml.sax.saxutils import escape
 
 W, H = 1440, 430
+MX, MY = 1128, 168          # monogram medallion centre
 FONT = "Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
 MONO = "'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace"
 
@@ -79,7 +80,7 @@ def build() -> str:
     return f'''<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="heroTitle heroDesc">
   <title id="heroTitle">Rishi Raj DEV — AI / ML Researcher and Full-Stack Engineer</title>
-  <desc id="heroDesc">Dark navy hero banner with cyan, violet and teal gradients, an animated neural network motif, the name Rishi Raj DEV, role tags, technology tags and an identity band.</desc>
+  <desc id="heroDesc">Dark navy hero banner with cyan, violet and teal gradients, an animated neural network motif, the name Rishi Raj DEV, an RD monogram medallion with orbiting rings, role tags, technology tags and an identity band.</desc>
 
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
@@ -116,6 +117,11 @@ def build() -> str:
     <radialGradient id="glowViolet" cx="78%" cy="26%" r="62%">
       <stop offset="0%" stop-color="#7c3aed" stop-opacity=".38"/>
       <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="medGlow" cx="50%" cy="32%" r="68%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity=".3"/>
+      <stop offset="62%" stop-color="#22d3ee" stop-opacity=".07"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="glowCyan" cx="12%" cy="88%" r="58%">
       <stop offset="0%" stop-color="#06b6d4" stop-opacity=".26"/>
@@ -167,6 +173,29 @@ def build() -> str:
       </circle>
     </g>
     <rect x="700" y="0" width="740" height="{H}" fill="url(#fadeRight)" opacity=".55"/>
+
+    <!-- monogram medallion: the identity anchor, drawn over the network -->
+    <g>
+      <circle cx="{MX}" cy="{MY}" r="122" fill="#7c3aed" opacity=".2" filter="url(#soft)"/>
+      <circle cx="{MX}" cy="{MY}" r="108" fill="none" stroke="url(#accent)" stroke-opacity=".5" stroke-width="1.6" stroke-dasharray="4 11">
+        <animateTransform attributeName="transform" type="rotate" values="0 {MX} {MY};360 {MX} {MY}" dur="46s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="{MX}" cy="{MY}" r="95" fill="none" stroke="#22d3ee" stroke-opacity=".22" stroke-width="1" stroke-dasharray="28 16">
+        <animateTransform attributeName="transform" type="rotate" values="360 {MX} {MY};0 {MX} {MY}" dur="32s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="{MX}" cy="{MY}" r="84" fill="#070c19" fill-opacity=".97" stroke="#8fb3dd" stroke-opacity=".26"/>
+      <circle cx="{MX}" cy="{MY}" r="84" fill="url(#medGlow)"/>
+      <circle cx="{MX}" cy="{MY}" r="84" fill="none" stroke="url(#accent)" stroke-opacity=".45" stroke-width="2"/>
+      <text x="{MX}" y="{MY + 23}" text-anchor="middle" font-size="62" font-weight="800" letter-spacing="-1" fill="url(#accent)">RD</text>
+      <circle cx="{MX + 108}" cy="{MY}" r="4.6" fill="#67e8f9">
+        <animateTransform attributeName="transform" type="rotate" values="0 {MX} {MY};360 {MX} {MY}" dur="18s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="{MX - 95}" cy="{MY}" r="3.4" fill="#c4b5fd">
+        <animateTransform attributeName="transform" type="rotate" values="360 {MX} {MY};0 {MX} {MY}" dur="26s" repeatCount="indefinite"/>
+      </circle>
+      <rect x="{MX - 82}" y="292" width="164" height="26" rx="13" fill="#0b1424" fill-opacity=".92" stroke="#2f4a6d"/>
+      <text x="{MX}" y="309" text-anchor="middle" font-size="10.5" font-weight="700" letter-spacing="1.8" fill="#a9c4e4">INDIA · UTC+5:30</text>
+    </g>
 
     <!-- status chip -->
     <rect x="74" y="48" width="330" height="34" rx="17" fill="#0e1a30" stroke="#2f4a6d"/>

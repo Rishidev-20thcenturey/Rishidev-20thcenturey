@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="400" viewBox="0 0 900 400" role="img" aria-labelledby="tterm dterm">
+  <title id="tterm">A terminal session introducing Rishi Raj DEV</title>
+  <desc id="dterm">An animated terminal typing out whoami, current focus areas, and a status line reading build carefully, measure honestly, keep shipping, status open to collaborate.</desc>
+  <defs>
+    <linearGradient id="tbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070c18"/>
+      <stop offset="60%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#08131f"/>
+    </linearGradient>
+    <linearGradient id="tbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#111c30"/>
+      <stop offset="100%" stop-color="#0d1526"/>
+    </linearGradient>
+    <linearGradient id="tedge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#2dd4bf"/>
+    </linearGradient>
+    <radialGradient id="tglow" cx="82%" cy="12%" r="66%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity=".2"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="tgrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#9cc3ff" stroke-opacity=".05" stroke-width="1"/>
+    </pattern>
+    <filter id="tblur" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="20"/></filter>
+    <clipPath id="t0">
+      <rect x="0" y="61" width="0" height="26">
+        <animate attributeName="width" values="0;0;900;900" keyTimes="0;0.0000;0.0475;1" dur="15.0s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <clipPath id="t1">
+      <rect x="0" y="87" width="0" height="26">
+        <animate attributeName="width" values="0;0;900;900" keyTimes="0;0.0475;0.1539;1" dur="15.0s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <clipPath id="t2">
+      <rect x="0" y="113" width="0" height="26">
+        <animate attributeName="width" values="0;0;900;900" keyTimes="0;0.1539;0.1607;1" dur="15.0s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <clipPath id="t3">
+      <rect x="0" y="139" width="0" height="26">
+        <animate attributeName="width" values="0;0;900;900" keyTimes="0;0.1607;0.2240;1" dur="15.0s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <clipPath id="t4">
+      <rect x="0" y="165" width="0" height="26">
+        <animate attributeName="width" values="0;0;900;900" keyTimes="0;0.2240;0.3213;1" dur="15.0s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <clipPath id="t5">
+      <rect x="0" y="191" width="0" height="26">
+        <animate attributeName="width" values="0;0;900;900" keyTimes="0;0.3213;0.4254;1" dur="15.0s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <clipPath id="t6">
+      <rect x="0" y="217" width="0" height="26">
+        <animate attributeName="width" values="0;0;900;900" keyTimes="0;0.4254;0.4322;1" dur="15.0s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <clipPath id="t7">
+      <rect x="0" y="243" width="0" height="26">
+        <animate attributeName="width" values="0;0;900;900" keyTimes="0;0.4322;0.5001;1" dur="15.0s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <clipPath id="t8">
+      <rect x="0" y="269" width="0" height="26">
+        <animate attributeName="width" values="0;0;900;900" keyTimes="0;0.5001;0.6065;1" dur="15.0s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <clipPath id="t9">
+      <rect x="0" y="295" width="0" height="26">
+        <animate attributeName="width" values="0;0;900;900" keyTimes="0;0.6065;0.7400;1" dur="15.0s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+  </defs>
+
+  <rect x="1" y="1" width="898" height="398" rx="16" fill="url(#tbg)"/>
+  <rect x="1" y="1" width="898" height="398" rx="16" fill="url(#tgrid)"/>
+  <rect x="1" y="1" width="898" height="398" rx="16" fill="url(#tglow)"/>
+  <ellipse cx="770" cy="60" rx="150" ry="70" fill="#22d3ee" opacity=".08" filter="url(#tblur)"/>
+
+  <path d="M1 17 a16 16 0 0 1 16 -16 h 866 a16 16 0 0 1 16 16 v 27 h -898 z" fill="url(#tbar)"/>
+  <line x1="1" y1="44" x2="899" y2="44" stroke="#2b4468" stroke-opacity=".8"/>
+  <circle cx="26" cy="23" r="5.6" fill="#ff5f57"/>
+  <circle cx="46" cy="23" r="5.6" fill="#febc2e"/>
+  <circle cx="66" cy="23" r="5.6" fill="#28c840"/>
+  <text x="450" y="28" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" font-weight="600" letter-spacing=".4" fill="#7d95b5">rishi@dev — zsh — 96×24</text>
+  <g font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" font-weight="600">
+    <rect x="744" y="14" width="136" height="19" rx="9.5" fill="#0a1424" stroke="#2dd4bf" stroke-opacity=".4"/>
+    <circle cx="757" cy="23.5" r="3.4" fill="#2dd4bf">
+      <animate attributeName="opacity" values="1;.25;1" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="767" y="27.5" fill="#5eead4">available for work</text>
+  </g>
+
+    <g clip-path="url(#t0)">
+      <text x="30" y="80" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="14.5" font-weight="500"><tspan x="30.0" fill="#34d399">rishi@dev</tspan><tspan x="108.6" fill="#5c7595"> ~ </tspan><tspan x="134.7" fill="#e8f0fc">%</tspan><tspan x="143.5" fill="#7dd3fc">  whoami</tspan></text>
+    </g>
+    <rect x="30.0" y="67" width="8" height="17" fill="#67e8f9" opacity="0">
+      <animate attributeName="x" values="30.0;30.0;213.3;213.3" keyTimes="0;0.0015;0.0475;1" dur="15.0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0;.9;.9;0" keyTimes="0;0.0015;0.0015;0.0475;0.0515" dur="15.0s" repeatCount="indefinite"/>
+    </rect>
+    <g clip-path="url(#t1)">
+      <text x="30" y="106" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="14.5" font-weight="500"><tspan x="47.5" fill="#c4b5fd">→</tspan><tspan x="56.2" fill="#e8f0fc">  ai / ml researcher</tspan><tspan x="230.8" fill="#5c7595">   ·</tspan><tspan x="265.7" fill="#e8f0fc">   full-stack engineer</tspan></text>
+    </g>
+    <rect x="47.5" y="93" width="8" height="17" fill="#67e8f9" opacity="0">
+      <animate attributeName="x" values="47.5;47.5;457.7;457.7" keyTimes="0;0.0475;0.1539;1" dur="15.0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0;.9;.9;0" keyTimes="0;0.0475;0.0475;0.1539;0.1579" dur="15.0s" repeatCount="indefinite"/>
+    </rect>
+    <g clip-path="url(#t3)">
+      <text x="30" y="158" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="14.5" font-weight="500"><tspan x="30.0" fill="#34d399">rishi@dev</tspan><tspan x="108.6" fill="#5c7595"> ~ </tspan><tspan x="134.7" fill="#e8f0fc">%</tspan><tspan x="143.5" fill="#7dd3fc">  cat focus.txt</tspan></text>
+    </g>
+    <rect x="30.0" y="145" width="8" height="17" fill="#67e8f9" opacity="0">
+      <animate attributeName="x" values="30.0;30.0;274.4;274.4" keyTimes="0;0.1607;0.2240;1" dur="15.0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0;.9;.9;0" keyTimes="0;0.1605;0.1607;0.2240;0.2280" dur="15.0s" repeatCount="indefinite"/>
+    </rect>
+    <g clip-path="url(#t4)">
+      <text x="30" y="184" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="14.5" font-weight="500"><tspan x="47.5" fill="#9fb4cf">generative models</tspan><tspan x="195.9" fill="#5c7595">        </tspan><tspan x="265.7" fill="#9fb4cf">diffusion research</tspan></text>
+    </g>
+    <rect x="47.5" y="171" width="8" height="17" fill="#67e8f9" opacity="0">
+      <animate attributeName="x" values="47.5;47.5;422.8;422.8" keyTimes="0;0.2240;0.3213;1" dur="15.0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0;.9;.9;0" keyTimes="0;0.2238;0.2240;0.3213;0.3253" dur="15.0s" repeatCount="indefinite"/>
+    </rect>
+    <g clip-path="url(#t5)">
+      <text x="30" y="210" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="14.5" font-weight="500"><tspan x="47.5" fill="#9fb4cf">typed realtime systems</tspan><tspan x="239.5" fill="#5c7595">    </tspan><tspan x="274.4" fill="#9fb4cf">low-compute training</tspan></text>
+    </g>
+    <rect x="47.5" y="197" width="8" height="17" fill="#67e8f9" opacity="0">
+      <animate attributeName="x" values="47.5;47.5;449.0;449.0" keyTimes="0;0.3213;0.4254;1" dur="15.0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0;.9;.9;0" keyTimes="0;0.3210;0.3213;0.4254;0.4294" dur="15.0s" repeatCount="indefinite"/>
+    </rect>
+    <g clip-path="url(#t7)">
+      <text x="30" y="262" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="14.5" font-weight="500"><tspan x="30.0" fill="#34d399">rishi@dev</tspan><tspan x="108.6" fill="#5c7595"> ~ </tspan><tspan x="134.7" fill="#e8f0fc">%</tspan><tspan x="143.5" fill="#7dd3fc">  ./ship --honest</tspan></text>
+    </g>
+    <rect x="30.0" y="249" width="8" height="17" fill="#67e8f9" opacity="0">
+      <animate attributeName="x" values="30.0;30.0;291.9;291.9" keyTimes="0;0.4322;0.5001;1" dur="15.0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0;.9;.9;0" keyTimes="0;0.4318;0.4322;0.5001;0.5041" dur="15.0s" repeatCount="indefinite"/>
+    </rect>
+    <g clip-path="url(#t8)">
+      <text x="30" y="288" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="14.5" font-weight="500"><tspan x="47.5" fill="#34d399">[ok]</tspan><tspan x="82.4" fill="#9fb4cf"> build carefully</tspan><tspan x="222.0" fill="#5c7595">      </tspan><tspan x="274.4" fill="#34d399">[ok]</tspan><tspan x="309.3" fill="#9fb4cf"> measure honestly</tspan></text>
+    </g>
+    <rect x="47.5" y="275" width="8" height="17" fill="#67e8f9" opacity="0">
+      <animate attributeName="x" values="47.5;47.5;457.7;457.7" keyTimes="0;0.5001;0.6065;1" dur="15.0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0;.9;.9;0" keyTimes="0;0.4996;0.5001;0.6065;0.6105" dur="15.0s" repeatCount="indefinite"/>
+    </rect>
+    <g clip-path="url(#t9)">
+      <text x="30" y="314" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="14.5" font-weight="500"><tspan x="47.5" fill="#34d399">[ok]</tspan><tspan x="82.4" fill="#9fb4cf"> keep shipping</tspan><tspan x="204.6" fill="#5c7595">         </tspan><tspan x="283.1" fill="#fbbf24">[..]</tspan><tspan x="318.1" fill="#c4b5fd"> status: open to collaborate</tspan></text>
+    </g>
+    <rect x="47.5" y="301" width="8" height="17" fill="#67e8f9" opacity="0">
+      <animate attributeName="x" values="47.5;47.5;562.5;562.5" keyTimes="0;0.6065;0.7400;1" dur="15.0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0;.9;.9;0" keyTimes="0;0.6059;0.6065;0.7400;0.7440" dur="15.0s" repeatCount="indefinite"/>
+    </rect>
+
+  <text x="30" y="340" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="14.5" font-weight="500"><tspan fill="#34d399">rishi@dev</tspan><tspan fill="#5c7595"> ~ </tspan><tspan fill="#e8f0fc">%</tspan></text>
+  <rect x="108.6" y="327" width="9" height="17" fill="#67e8f9">
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.5;.5;1" dur="1.1s" repeatCount="indefinite"/>
+  </rect>
+
+  <line x1="24" y1="366" x2="876" y2="366" stroke="#8fb3dd" stroke-opacity=".13"/>
+  <text x="30" y="387" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" font-weight="600" letter-spacing="1.2" fill="#5c7595">IST / UTC+5:30</text>
+  <text x="450" y="387" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" font-weight="600" letter-spacing="1.2" fill="#5c7595">BUILD CAREFULLY · MEASURE HONESTLY · KEEP SHIPPING</text>
+  <text x="870" y="387" text-anchor="end" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="11" font-weight="600" letter-spacing="1.2" fill="#5c7595">exit 0</text>
+
+  <rect x="1" y="1" width="898" height="398" rx="16" fill="none" stroke="#8fb3dd" stroke-opacity=".2"/>
+  <rect x="0" y="395" width="900" height="5" rx="2.5" fill="url(#tedge)"/>
+</svg>

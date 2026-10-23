@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="14" viewBox="0 0 1200 14" role="presentation" aria-hidden="true">
+  <defs>
+    <linearGradient id="dfade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="18%" stop-color="#22d3ee" stop-opacity=".5"/>
+      <stop offset="50%" stop-color="#a855f7" stop-opacity=".65"/>
+      <stop offset="82%" stop-color="#2dd4bf" stop-opacity=".5"/>
+      <stop offset="100%" stop-color="#2dd4bf" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="dsweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity=".95"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="dclip"><rect x="0" y="6" width="1200" height="2"/></clipPath>
+  </defs>
+  <rect x="0" y="6" width="1200" height="2" fill="url(#dfade)"/>
+  <g clip-path="url(#dclip)">
+    <rect x="-260" y="6" width="260" height="2" fill="url(#dsweep)">
+      <animate attributeName="x" values="-260;1200" dur="4.6s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g transform="translate(600 7)">
+    <rect x="-4.5" y="-4.5" width="9" height="9" rx="1.5" fill="#0b1020" stroke="#a855f7" stroke-opacity=".85">
+      <animateTransform attributeName="transform" type="rotate" values="45;225" dur="9s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <circle cx="562" cy="7" r="2" fill="#22d3ee" opacity=".8"/>
+  <circle cx="638" cy="7" r="2" fill="#2dd4bf" opacity=".8"/>
+</svg>
