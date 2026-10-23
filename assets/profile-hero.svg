@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="430" viewBox="0 0 1440 430" role="img" aria-labelledby="heroTitle heroDesc">
+  <title id="heroTitle">Rishi Raj DEV — AI / ML Researcher and Full-Stack Engineer</title>
+  <desc id="heroDesc">Dark navy hero banner with cyan, violet and teal gradients, an animated neural network motif, the name Rishi Raj DEV, role tags, technology tags and an identity band.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070b18"/>
+      <stop offset="46%" stop-color="#131634"/>
+      <stop offset="100%" stop-color="#04222f"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="48%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#2dd4bf"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-360 0;360 0;-360 0" dur="11s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="accentSoft" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity=".05"/>
+      <stop offset="50%" stop-color="#a855f7" stop-opacity=".5"/>
+      <stop offset="100%" stop-color="#2dd4bf" stop-opacity=".05"/>
+    </linearGradient>
+    <linearGradient id="nameFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#cfdef7"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity=".92"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-1 0;1 0" dur="5.5s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="fadeRight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0b1020" stop-opacity="0"/>
+      <stop offset="72%" stop-color="#0b1020" stop-opacity=".72"/>
+      <stop offset="100%" stop-color="#0b1020" stop-opacity=".94"/>
+    </linearGradient>
+    <radialGradient id="glowViolet" cx="78%" cy="26%" r="62%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity=".38"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowCyan" cx="12%" cy="88%" r="58%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity=".26"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0H0V30" fill="none" stroke="#9cc3ff" stroke-opacity=".075" stroke-width="1"/>
+    </pattern>
+    <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#9cc3ff" fill-opacity=".14"/>
+    </pattern>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+    <filter id="tight" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <clipPath id="nameClip">
+      <text x="74" y="182" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="68" font-weight="800" letter-spacing="-1.6">RISHI RAJ DEV</text>
+    </clipPath>
+    <clipPath id="frame"><rect width="1440" height="430" rx="26"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+    <rect width="1440" height="430" fill="url(#bg)"/>
+    <rect width="1440" height="430" fill="url(#grid)"/>
+    <rect width="1440" height="430" fill="url(#glowViolet)"/>
+    <rect width="1440" height="430" fill="url(#glowCyan)"/>
+
+    <ellipse cx="1150" cy="92" rx="230" ry="110" fill="#06b6d4" opacity=".13" filter="url(#soft)"/>
+    <ellipse cx="980" cy="270" rx="200" ry="96" fill="#a855f7" opacity=".13" filter="url(#soft)"/>
+
+    <!-- generative-model network motif -->
+    <g fill="none" stroke="url(#accentSoft)" stroke-width="1.3" stroke-opacity=".85">
+    <line x1="928" y1="96" x2="1012" y2="58"/>
+    <line x1="1012" y1="58" x2="1092" y2="108"/>
+    <line x1="1092" y1="108" x2="1186" y2="66"/>
+    <line x1="1186" y1="66" x2="1272" y2="118"/>
+    <line x1="1272" y1="118" x2="1352" y2="76"/>
+    <line x1="928" y1="96" x2="960" y2="168"/>
+    <line x1="1012" y1="58" x2="1052" y2="208"/>
+    <line x1="1092" y1="108" x2="1140" y2="160"/>
+    <line x1="1186" y1="66" x2="1226" y2="214"/>
+    <line x1="1272" y1="118" x2="1312" y2="168"/>
+    <line x1="1352" y1="76" x2="1382" y2="220"/>
+    <line x1="960" y1="168" x2="1052" y2="208"/>
+    <line x1="1052" y1="208" x2="1140" y2="160"/>
+    <line x1="1140" y1="160" x2="1226" y2="214"/>
+    <line x1="1226" y1="214" x2="1312" y2="168"/>
+    <line x1="1312" y1="168" x2="1382" y2="220"/>
+    <line x1="960" y1="168" x2="908" y2="252"/>
+    <line x1="1052" y1="208" x2="1000" y2="288"/>
+    <line x1="1140" y1="160" x2="1096" y2="246"/>
+    <line x1="1226" y1="214" x2="1188" y2="292"/>
+    <line x1="1312" y1="168" x2="1280" y2="250"/>
+    <line x1="1382" y1="220" x2="1362" y2="292"/>
+    <line x1="908" y1="252" x2="1000" y2="288"/>
+    <line x1="1000" y1="288" x2="1096" y2="246"/>
+    <line x1="1096" y1="246" x2="1188" y2="292"/>
+    <line x1="1188" y1="292" x2="1280" y2="250"/>
+    <line x1="1280" y1="250" x2="1362" y2="292"/>
+    </g>
+    <g fill="#67e8f9" fill-opacity=".9">
+    <circle cx="928" cy="96" r="4.6"/>
+    <circle cx="1012" cy="58" r="3.6"/>
+    <circle cx="1092" cy="108" r="3.6"/>
+    <circle cx="1186" cy="66" r="4.6"/>
+    <circle cx="1272" cy="118" r="3.6"/>
+    <circle cx="1352" cy="76" r="3.6"/>
+    <circle cx="960" cy="168" r="4.6"/>
+    <circle cx="1052" cy="208" r="3.6"/>
+    <circle cx="1140" cy="160" r="3.6"/>
+    <circle cx="1226" cy="214" r="4.6"/>
+    <circle cx="1312" cy="168" r="3.6"/>
+    <circle cx="1382" cy="220" r="3.6"/>
+    <circle cx="908" cy="252" r="4.6"/>
+    <circle cx="1000" cy="288" r="3.6"/>
+    <circle cx="1096" cy="246" r="3.6"/>
+    <circle cx="1188" cy="292" r="4.6"/>
+    <circle cx="1280" cy="250" r="3.6"/>
+    <circle cx="1362" cy="292" r="3.6"/>
+    </g>
+    <g fill="none" stroke="#a5f3fc" stroke-width="2.2" stroke-opacity=".8" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="928,96 1012,58 1052,208 1140,160 1226,214 1188,292 1280,250" stroke-dasharray="110 900">
+      <animate attributeName="stroke-dashoffset" values="1010;-160" dur="4.6s" begin="0.0s" repeatCount="indefinite"/>
+    </polyline>
+    <polyline points="1092,108 1186,66 1226,214 1312,168 1382,220" stroke-dasharray="110 900">
+      <animate attributeName="stroke-dashoffset" values="1010;-160" dur="5.8999999999999995s" begin="0.9s" repeatCount="indefinite"/>
+    </polyline>
+    <polyline points="908,252 1000,288 1052,208 960,168" stroke-dasharray="110 900">
+      <animate attributeName="stroke-dashoffset" values="1010;-160" dur="7.199999999999999s" begin="1.8s" repeatCount="indefinite"/>
+    </polyline>
+    </g>
+    <g fill="#c4b5fd">
+      <circle cx="1226" cy="214" r="3" filter="url(#tight)">
+        <animate attributeName="opacity" values=".2;1;.2" dur="3.4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="1012" cy="58" r="3" filter="url(#tight)">
+        <animate attributeName="opacity" values="1;.2;1" dur="4.2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <rect x="700" y="0" width="740" height="430" fill="url(#fadeRight)" opacity=".55"/>
+
+    <!-- status chip -->
+    <rect x="74" y="48" width="330" height="34" rx="17" fill="#0e1a30" stroke="#2f4a6d"/>
+    <circle cx="96" cy="65" r="5" fill="#34d399">
+      <animate attributeName="opacity" values="1;.25;1" dur="2.1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="96" cy="65" r="5" fill="none" stroke="#34d399" stroke-opacity=".5">
+      <animate attributeName="r" values="5;12" dur="2.1s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values=".5;0" dur="2.1s" repeatCount="indefinite"/>
+    </circle>
+    <text x="112" y="70" font-size="11.5" font-weight="700" letter-spacing="2.4" fill="#a9c4e4">OPEN TO COLLABORATE</text>
+    <rect x="300" y="57" width="90" height="17" rx="8.5" fill="#132a44" stroke="#3a5c82"/>
+    <text x="345" y="69" text-anchor="middle" font-size="9.5" font-weight="800" letter-spacing="1.4" fill="#7dd3fc">2026</text>
+
+    <!-- name -->
+    <text x="74" y="182" font-size="68" font-weight="800" letter-spacing="-1.6" fill="url(#nameFill)">RISHI RAJ DEV</text>
+    <g clip-path="url(#nameClip)">
+      <rect x="-340" y="118" width="210" height="80" fill="url(#shine)" opacity=".55">
+        <animate attributeName="x" values="-340;773" dur="5.5s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- animated gradient rail -->
+    <rect x="76" y="202" width="591" height="6" rx="3" fill="url(#accent)"/>
+
+    <!-- role line -->
+    <text x="74" y="249" font-size="22" font-weight="600" fill="#e2ecfb">AI / ML / AGI Researcher</text>
+    <text x="326" y="249" font-size="22" font-weight="600" fill="#4f6a8c">·</text>
+    <text x="346" y="249" font-size="22" font-weight="600" fill="#e2ecfb">Generative Models</text>
+    <text x="524" y="249" font-size="22" font-weight="600" fill="#4f6a8c">·</text>
+    <text x="544" y="249" font-size="22" font-weight="600" fill="#e2ecfb">Full-Stack Engineering</text>
+
+    <!-- stack tags -->
+    <g font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12" font-weight="600" letter-spacing=".2">
+      <rect x="74" y="276" width="204" height="30" rx="8" fill="#0d1729" fill-opacity=".9" stroke="#2b4468"/>
+      <text x="88" y="296" fill="#7dd3fc">python · pytorch</text>
+      <rect x="290" y="276" width="238" height="30" rx="8" fill="#0d1729" fill-opacity=".9" stroke="#2b4468"/>
+      <text x="304" y="296" fill="#c4b5fd">typescript · react · node</text>
+      <rect x="540" y="276" width="192" height="30" rx="8" fill="#0d1729" fill-opacity=".9" stroke="#2b4468"/>
+      <text x="554" y="296" fill="#5eead4">ai / ml research</text>
+    </g>
+    <text x="74" y="325" font-size="12" font-weight="600" letter-spacing="2.6" fill="#7d97b8">BUILD CAREFULLY   /   MEASURE HONESTLY   /   KEEP SHIPPING</text>
+
+    <!-- stats band -->
+    <line x1="60" y1="356" x2="1380" y2="356" stroke="#8fb3dd" stroke-opacity=".16"/>
+    <rect x="60" y="357" width="1320" height="72" rx="18" fill="#080e1d" fill-opacity=".55" stroke="#7f9dc4" stroke-opacity=".12"/>
+    <text x="90" y="390" text-anchor="middle" font-size="23" font-weight="800" letter-spacing="-.2" fill="#f1f6ff">AI / ML</text>
+    <text x="90" y="411" text-anchor="middle" font-size="9.5" font-weight="700" letter-spacing="2" fill="#8aa2c4">RESEARCH &amp; DEVELOPMENT</text>
+    <text x="450" y="390" text-anchor="middle" font-size="23" font-weight="800" letter-spacing="-.2" fill="#f1f6ff">TYPESCRIPT</text>
+    <text x="450" y="411" text-anchor="middle" font-size="9.5" font-weight="700" letter-spacing="2" fill="#8aa2c4">PRODUCT ENGINEERING</text>
+    <line x1="270" y1="368" x2="270" y2="414" stroke="#7f9dc4" stroke-opacity=".18"/>
+    <text x="810" y="390" text-anchor="middle" font-size="23" font-weight="800" letter-spacing="-.2" fill="#f1f6ff">PYTHON</text>
+    <text x="810" y="411" text-anchor="middle" font-size="9.5" font-weight="700" letter-spacing="2" fill="#8aa2c4">MODELS &amp; PIPELINES</text>
+    <line x1="630" y1="368" x2="630" y2="414" stroke="#7f9dc4" stroke-opacity=".18"/>
+    <text x="1170" y="390" text-anchor="middle" font-size="23" font-weight="800" letter-spacing="-.2" fill="#f1f6ff">WORLDWIDE</text>
+    <text x="1170" y="411" text-anchor="middle" font-size="9.5" font-weight="700" letter-spacing="2" fill="#8aa2c4">OPEN TO COLLABORATE</text>
+    <line x1="990" y1="368" x2="990" y2="414" stroke="#7f9dc4" stroke-opacity=".18"/>
+
+    <rect x="1" y="1" width="1438" height="428" rx="25" fill="none" stroke="#9db8dd" stroke-opacity=".22"/>
+    <rect x="0" y="424" width="1440" height="6" rx="3" fill="url(#accent)"/>
+  </g>
+</svg>
