@@ -5,11 +5,9 @@
 -->
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B1020,45:174A7E,75:7C3AED,100:06B6D4&height=230&section=header&text=RISHI%20RAJ%20DEV&fontSize=42&fontColor=FFFFFF&fontAlignY=35&desc=Independent%20AI%20%26%20Software%20Developer&descAlignY=56&descSize=17&animation=fadeIn" alt="Rishi Raj Dev profile banner" width="100%" />
+  <img src="assets/profile-banner.svg" alt="Rishi Raj Dev — Independent AI and Software Developer" width="100%" />
 </p>
 
-<h1 align="center">Rishi Raj DEV</h1>
-<p align="center"><strong>Independent AI &amp; Software Developer</strong></p>
 
 <p align="center">
   <a href="https://github.com/Rishidev-20thcenturey"><img src="https://img.shields.io/badge/GitHub-Rishidev--20thcenturey-181717?style=for-the-badge&logo=github" alt="GitHub profile" /></a>
