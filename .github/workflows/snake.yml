@@ -1,0 +1,40 @@
+# Regenerates the contribution-grid snake animation referenced by README.md.
+#
+# The SVG is written to the orphan `output` branch and served from:
+#   https://raw.githubusercontent.com/Rishidev-20thcenturey/Rishidev-20thcenturey/output/github-contribution-grid-snake.svg
+#
+# First run: Actions -> "Generate contribution snake" -> Run workflow.
+name: Generate contribution snake
+
+on:
+  schedule:
+    # every 6 hours
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  generate:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Generate snake SVGs
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: Rishidev-20thcenturey
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - name: Push SVGs to the output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+          keep_history: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
