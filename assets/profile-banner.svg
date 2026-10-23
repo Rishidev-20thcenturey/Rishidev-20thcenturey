@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">Rishi Raj DEV — Independent AI and Software Developer</title>
+  <desc id="desc">A custom dark navy banner with cyan and violet gradients, geometric network motifs, and the name Rishi Raj DEV.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#080d1c"/>
+      <stop offset="52%" stop-color="#15163a"/>
+      <stop offset="100%" stop-color="#062b3b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="48%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#2dd4bf"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="72%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity=".34"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#93c5fd" stroke-opacity=".08" stroke-width="1"/>
+    </pattern>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="320" rx="24" fill="url(#bg)"/>
+  <rect width="1200" height="320" rx="24" fill="url(#grid)"/>
+  <rect width="1200" height="320" rx="24" fill="url(#glow)"/>
+  <ellipse cx="920" cy="80" rx="190" ry="92" fill="#06b6d4" opacity=".12" filter="url(#softGlow)"/>
+  <g fill="none" stroke="url(#accent)" stroke-opacity=".55" stroke-width="1.5">
+    <path d="M760 0L850 75L950 42L1030 112L1135 70L1200 112"/>
+    <path d="M800 320L890 230L980 262L1070 195L1165 235L1200 210"/>
+    <path d="M0 248L96 205L170 235L245 164L318 190"/>
+  </g>
+  <g fill="#67e8f9">
+    <circle cx="850" cy="75" r="4"/><circle cx="950" cy="42" r="4"/><circle cx="1030" cy="112" r="4"/>
+    <circle cx="890" cy="230" r="4"/><circle cx="980" cy="262" r="4"/><circle cx="1070" cy="195" r="4"/>
+    <circle cx="96" cy="205" r="4"/><circle cx="170" cy="235" r="4"/><circle cx="245" cy="164" r="4"/>
+  </g>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <rect x="74" y="62" width="318" height="32" rx="16" fill="#111c32" stroke="#334866"/>
+    <circle cx="92" cy="78" r="4" fill="#2dd4bf"/>
+    <text x="106" y="83" font-size="12" font-weight="700" letter-spacing="2.0" fill="#b9cbe6">INDEPENDENT DEVELOPER</text>
+    <text x="72" y="164" font-size="62" font-weight="850" letter-spacing="-2.2" fill="#f8fafc">RISHI RAJ DEV</text>
+    <rect x="76" y="185" width="126" height="5" rx="2.5" fill="url(#accent)"/>
+    <text x="74" y="224" font-size="23" font-weight="600" fill="#dce8fb">AI Research  ·  Generative Models  ·  Software Engineering</text>
+    <text x="75" y="270" font-size="13" font-weight="600" letter-spacing="2.0" fill="#8ca6c7">BUILD CAREFULLY  /  MEASURE HONESTLY  /  KEEP SHIPPING</text>
+  </g>
+  <rect x="1" y="1" width="1198" height="318" rx="23" fill="none" stroke="#8b9fbe" stroke-opacity=".25"/>
+  <rect x="0" y="314" width="1200" height="6" rx="3" fill="url(#accent)"/>
+</svg>
