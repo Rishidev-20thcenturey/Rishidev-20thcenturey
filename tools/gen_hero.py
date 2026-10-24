@@ -5,6 +5,7 @@ A dark-navy, cyan/violet/teal hero with a generative-model motif, an animated
 gradient rail, a shine sweep on the name, and a stats band along the bottom.
 Pure vector + SMIL so it animates when served as an <img> source on GitHub.
 """
+import math
 from pathlib import Path
 from xml.sax.saxutils import escape
 
@@ -23,6 +24,38 @@ STATS = [
     ("PYTHON", "MODELS & PIPELINES"),
     ("WORLDWIDE", "OPEN TO COLLABORATE"),
 ]
+
+import random as _random
+
+_rng = _random.Random(7)
+# neural mesh baked into the letterforms of the name (bbox x 78..660, y 132..188)
+MESH_NODES = [(round(_rng.uniform(78, 660), 1), round(_rng.uniform(132, 188), 1)) for _ in range(46)]
+MESH_EDGES = [
+    (i, j)
+    for i in range(len(MESH_NODES))
+    for j in range(i + 1, len(MESH_NODES))
+    if ((MESH_NODES[i][0] - MESH_NODES[j][0]) ** 2 + (MESH_NODES[i][1] - MESH_NODES[j][1]) ** 2) ** 0.5 < 66
+]
+MESH_PULSES = MESH_EDGES[::11][:8]          # synapse fires travelling edge to edge
+MESH_FIRERS = list(range(2, len(MESH_NODES), 5))  # neurons that pulse in place
+
+# neural core inside the medallion: two concentric neuron rings + synapses
+def _ring(radius, count, phase=0.0):
+    return [
+        (round(MX + radius * math.cos(2 * math.pi * k / count + phase), 1),
+         round(MY + radius * math.sin(2 * math.pi * k / count + phase), 1))
+        for k in range(count)
+    ]
+
+RING1 = _ring(64, 10)
+RING2 = _ring(44, 8, phase=math.pi / 8)
+CORE_EDGES = (
+    [(i, i % 8) for i in range(10)]
+    + [(i, (i + 7) % 8) for i in range(0, 10, 3)]
+)
+CORE_CHORDS = [(i, (i + 1) % 10) for i in range(0, 10, 2)]
+CORE_PULSES = [(i, i % 8) for i in (0, 3, 6, 9)]
+CORE_FIRERS = [1, 4, 7, 11, 14]
 
 NODES = [
     (928, 96), (1012, 58), (1092, 108), (1186, 66), (1272, 118), (1352, 76),
@@ -43,6 +76,14 @@ TRACES = [
     [2, 3, 9, 10, 11],
     [12, 13, 7, 6],
 ]
+
+# dendrites: wire six surrounding network nodes into the medallion rim
+DENDRITES = []
+for _i in (2, 4, 8, 10, 14, 16):
+    _x, _y = NODES[_i]
+    _dx, _dy = _x - MX, _y - MY
+    _d = (_dx ** 2 + _dy ** 2) ** 0.5
+    DENDRITES.append((_x, _y, round(MX + _dx / _d * 84, 1), round(MY + _dy / _d * 84, 1)))
 
 
 def node_points(idx):
@@ -69,16 +110,67 @@ def build() -> str:
     )
     stats = []
     for i, (value, label) in enumerate(STATS):
-        cx = 90 + i * 360
+        cx = 225 + i * 330
         stats.append(
             f'''    <text x="{cx}" y="390" text-anchor="middle" font-size="23" font-weight="800" letter-spacing="-.2" fill="#f1f6ff">{escape(value)}</text>
     <text x="{cx}" y="411" text-anchor="middle" font-size="9.5" font-weight="700" letter-spacing="2" fill="#8aa2c4">{escape(label)}</text>'''
         )
         if i:
             stats.append(
-                f'    <line x1="{cx - 180}" y1="368" x2="{cx - 180}" y2="414" stroke="#7f9dc4" stroke-opacity=".18"/>'
+                f'    <line x1="{cx - 165}" y1="368" x2="{cx - 165}" y2="414" stroke="#7f9dc4" stroke-opacity=".18"/>'
             )
     stats_block = "\n".join(stats)
+
+    dendrites = "\n".join(
+        f'        <line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}"/>' for x1, y1, x2, y2 in DENDRITES
+    )
+    dendrite_pulses = "\n".join(
+        f'        <circle r="2.2" fill="#67e8f9" opacity=".85">'
+        f'<animate attributeName="cx" values="{x1};{x2}" dur="{2.4 + k * 0.5:.1f}s" begin="{k * 0.7:.1f}s" repeatCount="indefinite"/>'
+        f'<animate attributeName="cy" values="{y1};{y2}" dur="{2.4 + k * 0.5:.1f}s" begin="{k * 0.7:.1f}s" repeatCount="indefinite"/>'
+        f'<animate attributeName="opacity" values=".85;.85;0" keyTimes="0;.8;1" dur="{2.4 + k * 0.5:.1f}s" begin="{k * 0.7:.1f}s" repeatCount="indefinite"/></circle>'
+        for k, (x1, y1, x2, y2) in enumerate(DENDRITES)
+    )
+    core_edges = "\n".join(
+        f'        <line x1="{RING1[a][0]}" y1="{RING1[a][1]}" x2="{RING2[b][0]}" y2="{RING2[b][1]}"/>'
+        for a, b in CORE_EDGES
+    ) + "\n" + "\n".join(
+        f'        <line x1="{RING1[a][0]}" y1="{RING1[a][1]}" x2="{RING1[b][0]}" y2="{RING1[b][1]}" stroke-opacity=".18"/>'
+        for a, b in CORE_CHORDS
+    )
+    core_nodes = "\n".join(
+        f'        <circle cx="{x}" cy="{y}" r="2"/>' for x, y in RING1 + RING2
+    )
+    core_firers = "\n".join(
+        f'        <circle cx="{(RING1 + RING2)[i][0]}" cy="{(RING1 + RING2)[i][1]}" r="2.6" opacity=".25">'
+        f'<animate attributeName="opacity" values=".25;1;.25" dur="{1.6 + (i % 4) * 0.45:.1f}s" begin="{(i % 5) * 0.35:.1f}s" repeatCount="indefinite"/></circle>'
+        for i in CORE_FIRERS
+    )
+    core_pulses = "\n".join(
+        f'        <circle r="2.2" fill="#22d3ee" opacity=".9">'
+        f'<animate attributeName="cx" values="{RING1[a][0]};{RING2[b][0]}" dur="{1.4 + k * 0.3:.1f}s" begin="{k * 0.6:.1f}s" repeatCount="indefinite"/>'
+        f'<animate attributeName="cy" values="{RING1[a][1]};{RING2[b][1]}" dur="{1.4 + k * 0.3:.1f}s" begin="{k * 0.6:.1f}s" repeatCount="indefinite"/></circle>'
+        for k, (a, b) in enumerate(CORE_PULSES)
+    )
+
+    mesh_edges = "\n".join(
+        f'        <line x1="{MESH_NODES[a][0]}" y1="{MESH_NODES[a][1]}" x2="{MESH_NODES[b][0]}" y2="{MESH_NODES[b][1]}"/>'
+        for a, b in MESH_EDGES
+    )
+    mesh_nodes = "\n".join(
+        f'        <circle cx="{x}" cy="{y}" r="1.5"/>' for x, y in MESH_NODES
+    )
+    mesh_firers = "\n".join(
+        f'        <circle cx="{MESH_NODES[i][0]}" cy="{MESH_NODES[i][1]}" r="2.1" opacity=".2">'
+        f'<animate attributeName="opacity" values=".2;1;.2" dur="{1.8 + (i % 5) * 0.5:.1f}s" begin="{(i % 7) * 0.4:.1f}s" repeatCount="indefinite"/></circle>'
+        for i in MESH_FIRERS
+    )
+    mesh_pulses = "\n".join(
+        f'        <circle r="2.4" fill="{"#7c3aed" if k % 2 else "#22d3ee"}" opacity=".9">'
+        f'<animate attributeName="cx" values="{MESH_NODES[a][0]};{MESH_NODES[b][0]}" dur="{1.1 + k * 0.23:.2f}s" begin="{k * 0.5:.1f}s" repeatCount="indefinite"/>'
+        f'<animate attributeName="cy" values="{MESH_NODES[a][1]};{MESH_NODES[b][1]}" dur="{1.1 + k * 0.23:.2f}s" begin="{k * 0.5:.1f}s" repeatCount="indefinite"/></circle>'
+        for k, (a, b) in enumerate(MESH_PULSES)
+    )
 
     return f'''<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="heroTitle heroDesc">
@@ -185,12 +277,37 @@ def build() -> str:
       <circle cx="{MX}" cy="{MY}" r="108" fill="none" stroke="url(#accent)" stroke-opacity=".5" stroke-width="1.6" stroke-dasharray="4 11">
         <animateTransform attributeName="transform" type="rotate" values="0 {MX} {MY};360 {MX} {MY}" dur="46s" repeatCount="indefinite"/>
       </circle>
+      <g fill="#67e8f9">
+        <animateTransform attributeName="transform" type="rotate" values="0 {MX} {MY};360 {MX} {MY}" dur="46s" repeatCount="indefinite"/>
+        <circle cx="{MX + 108}" cy="{MY}" r="3.2"/>
+        <circle cx="{MX - 108}" cy="{MY}" r="2.4" fill="#c4b5fd"/>
+        <circle cx="{MX}" cy="{MY + 108}" r="2.6"/>
+        <circle cx="{MX}" cy="{MY - 108}" r="3" fill="#c4b5fd"/>
+      </g>
+      <g stroke="#67e8f9" stroke-opacity=".3" stroke-width="1.1">
+{dendrites}
+      </g>
+      <g>
+{dendrite_pulses}
+      </g>
       <circle cx="{MX}" cy="{MY}" r="95" fill="none" stroke="#22d3ee" stroke-opacity=".22" stroke-width="1" stroke-dasharray="28 16">
         <animateTransform attributeName="transform" type="rotate" values="360 {MX} {MY};0 {MX} {MY}" dur="32s" repeatCount="indefinite"/>
       </circle>
       <circle cx="{MX}" cy="{MY}" r="84" fill="#070c19" fill-opacity=".97" stroke="#8fb3dd" stroke-opacity=".26"/>
       <circle cx="{MX}" cy="{MY}" r="84" fill="url(#medGlow)"/>
       <circle cx="{MX}" cy="{MY}" r="84" fill="none" stroke="url(#accent)" stroke-opacity=".45" stroke-width="2"/>
+      <g stroke="#22d3ee" stroke-opacity=".3" stroke-width="1">
+{core_edges}
+      </g>
+      <g fill="#67e8f9" fill-opacity=".75">
+{core_nodes}
+      </g>
+      <g fill="#a855f7">
+{core_firers}
+      </g>
+      <g>
+{core_pulses}
+      </g>
       <text x="{MX}" y="{MY + 23}" text-anchor="middle" font-size="62" font-weight="800" letter-spacing="-1" fill="url(#accent)">RD</text>
       <circle cx="{MX + 108}" cy="{MY}" r="4.6" fill="#67e8f9">
         <animateTransform attributeName="transform" type="rotate" values="0 {MX} {MY};360 {MX} {MY}" dur="18s" repeatCount="indefinite"/>
@@ -218,10 +335,30 @@ def build() -> str:
     <text x="345" y="69" text-anchor="middle" font-size="9.5" font-weight="800" letter-spacing="1.4" fill="#7dd3fc">2026</text>
     </g>
 
-    <!-- name: chromatic decode-in, ghosts converge then the real type locks -->
-    <text x="60" y="182" font-size="68" font-weight="800" letter-spacing="-1.6" fill="#22d3ee" opacity=".85">RISHI RAJ DEV<animate attributeName="x" values="60;74" begin="0s" dur="1.1s" fill="freeze"/><animate attributeName="opacity" values=".85;.85;0" keyTimes="0;.55;1" begin="0s" dur="1.1s" fill="freeze"/></text>
-    <text x="88" y="182" font-size="68" font-weight="800" letter-spacing="-1.6" fill="#f0abfc" opacity=".85">RISHI RAJ DEV<animate attributeName="x" values="88;74" begin="0s" dur="1.1s" fill="freeze"/><animate attributeName="opacity" values=".85;.85;0" keyTimes="0;.55;1" begin="0s" dur="1.1s" fill="freeze"/></text>
+    <!-- name v4: permanent chromatic glaze + a living neural mesh inside the glyphs -->
+    <!-- 1. the glaze: blurred gradient halo, fades in once, then breathes forever -->
+    <text x="74" y="182" font-size="68" font-weight="800" letter-spacing="-1.6" fill="url(#accent)" filter="url(#tight)" opacity="0">RISHI RAJ DEV<animate attributeName="opacity" values="0;.55" begin="0.2s" dur="0.9s" fill="freeze"/><animate attributeName="opacity" values=".55;.78;.55" begin="1.4s" dur="4.2s" repeatCount="indefinite"/></text>
+    <!-- 2. chromatic ghosts: converge during the intro, then stay — permanently split, micro-jittering -->
+    <text x="60" y="182" font-size="68" font-weight="800" letter-spacing="-1.6" fill="#22d3ee" opacity=".85">RISHI RAJ DEV<animate attributeName="x" values="60;71" begin="0s" dur="1s" fill="freeze"/><animate attributeName="opacity" values=".85;.5" begin="0s" dur="1s" fill="freeze"/><animate attributeName="x" values="71;70.2;71.7;71" begin="1s" dur="3.2s" repeatCount="indefinite"/><animate attributeName="opacity" values=".5;.34;.5" begin="1s" dur="2.6s" repeatCount="indefinite"/></text>
+    <text x="88" y="182" font-size="68" font-weight="800" letter-spacing="-1.6" fill="#f0abfc" opacity=".85">RISHI RAJ DEV<animate attributeName="x" values="88;77" begin="0s" dur="1s" fill="freeze"/><animate attributeName="opacity" values=".85;.5" begin="0s" dur="1s" fill="freeze"/><animate attributeName="x" values="77;77.9;76.3;77" begin="1s" dur="3.8s" repeatCount="indefinite"/><animate attributeName="opacity" values=".5;.36;.5" begin="1.3s" dur="3.1s" repeatCount="indefinite"/></text>
+    <!-- 3. the crisp type -->
     <text x="74" y="182" font-size="68" font-weight="800" letter-spacing="-1.6" fill="url(#nameFill)" opacity="0">RISHI RAJ DEV<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;.4;.85;1" begin="0s" dur="1.2s" fill="freeze"/></text>
+    <!-- 4. neural mesh clipped to the letterforms: engraved synapses, firing neurons, travelling pulses -->
+    <g clip-path="url(#nameClip)" opacity="0">
+      <animate attributeName="opacity" values="0;1" begin="0.9s" dur="0.6s" fill="freeze"/>
+      <g stroke="#0e2a4d" stroke-opacity=".34" stroke-width="1">
+{mesh_edges}
+      </g>
+      <g fill="#0369a1" fill-opacity=".5">
+{mesh_nodes}
+      </g>
+      <g fill="#0ea5e9">
+{mesh_firers}
+      </g>
+      <g>
+{mesh_pulses}
+      </g>
+    </g>
     <rect x="74" y="128" width="{NAME_W}" height="3" fill="#67e8f9" opacity="0">
       <animate attributeName="opacity" values="0;.9;0;0" keyTimes="0;.18;.34;1" begin="0.3s" dur="1s" fill="freeze"/>
     </rect>
