@@ -44,36 +44,25 @@
 
 <img src="assets/header-01-about.svg" alt="Section 01: About me" width="470" />
 
-<table width="100%">
-  <tr>
-    <td width="58%" valign="top">
-      <h3>Independent by habit, engineer by discipline.</h3>
-      <p>
-        I'm <strong>Rishi Raj DEV</strong> — I work where <strong>AI research</strong> meets
-        <strong>production software</strong>. Calling a model API is the easy part, so I spend my time on
-        what sits underneath it: training loops, latent representations, evaluation, and the plumbing
-        that turns an experiment into something people can actually use.
-      </p>
-      <p>
-        On the application side that means realtime interfaces, typed APIs, databases that stay honest,
-        CI that runs, and deployments I can point at. I prefer systems I can explain end to end and
-        claims I can back with evidence.
-      </p>
-    </td>
-    <td width="42%" valign="top">
-      <h3>Quick facts</h3>
-      <table width="100%">
-        <tr><td width="40%"><strong>Focus</strong></td><td>Generative AI · diffusion models · full-stack engineering</td></tr>
-        <tr><td><strong>Daily drivers</strong></td><td>Python · PyTorch · TypeScript · React · Node · PostgreSQL</td></tr>
-        <tr><td><strong>Currently</strong></td><td>Research engineering and low-compute model training</td></tr>
-        <tr><td><strong>Collaboration</strong></td><td>With <a href="https://github.com/Mrquillwing">@Mrquillwing</a> on <a href="https://github.com/Mrquillwing/Ojasvat">Ojasvat</a></td></tr>
-        <tr><td><strong>Based in</strong></td><td>India · UTC+5:30 · working worldwide</td></tr>
-        <tr><td><strong>Open to</strong></td><td>AI/ML roles, internships, research collaboration</td></tr>
-        <tr><td><strong>Reach me</strong></td><td>rishirajc406@gmail.com</td></tr>
-      </table>
-    </td>
-  </tr>
-</table>
+### Independent by habit, engineer by discipline.
+
+I'm **Rishi Raj DEV** — I work where **AI research** meets **production software**. Calling a model API
+is the easy part, so I spend my time on what sits underneath it: training loops, latent representations,
+evaluation, and the plumbing that turns an experiment into something people can actually use.
+
+On the application side that means realtime interfaces, typed APIs, databases that stay honest, CI that
+runs, and deployments I can point at. I prefer systems I can explain end to end and claims I can back
+with evidence.
+
+**Quick facts**
+
+- **Focus** — Generative AI · diffusion models · full-stack engineering
+- **Daily drivers** — Python · PyTorch · TypeScript · React · Node · PostgreSQL
+- **Currently** — Research engineering and low-compute model training
+- **Collaboration** — With [@Mrquillwing](https://github.com/Mrquillwing) on [Ojasvat](https://github.com/Mrquillwing/Ojasvat)
+- **Based in** — India · UTC+5:30 · working worldwide
+- **Open to** — AI/ML roles, internships, research collaboration
+- **Reach me** — rishirajc406@gmail.com
 
 <p align="center"><img src="assets/divider.svg" width="100%" height="14" alt="" /></p>
 
@@ -93,25 +82,20 @@
 
 <img src="assets/header-03-stack.svg" alt="Section 03: Tech stack" width="480" />
 
-<table width="100%">
-  <tr>
-    <td width="34%" valign="top" align="center">
-      <sub><strong>AI / ML</strong></sub><br />
-      <sub>modelling · training loops · evaluation · notebooks · artifacts</sub><br /><br />
-      <img src="https://skillicons.dev/icons?i=python,pytorch,tensorflow,jupyter,opencv,huggingface&theme=dark&perline=3" alt="Python, PyTorch, TensorFlow, Jupyter, OpenCV and Hugging Face" />
-    </td>
-    <td width="33%" valign="top" align="center">
-      <sub><strong>WEB / REALTIME</strong></sub><br />
-      <sub>typed frontends · APIs · WebSockets · 3D in the browser</sub><br /><br />
-      <img src="https://skillicons.dev/icons?i=ts,js,react,vite,nodejs,express,threejs,html,css&theme=dark&perline=3" alt="TypeScript, JavaScript, React, Vite, Node.js, Express, Three.js, HTML and CSS" />
-    </td>
-    <td width="33%" valign="top" align="center">
-      <sub><strong>DATA / PLATFORM</strong></sub><br />
-      <sub>schemas · CI · containers · deployment · reproducibility</sub><br /><br />
-      <img src="https://skillicons.dev/icons?i=postgres,mysql,redis,docker,git,github,githubactions,linux,bash&theme=dark&perline=3" alt="PostgreSQL, MySQL, Redis, Docker, Git, GitHub, GitHub Actions, Linux and Bash" />
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,pytorch,tensorflow,jupyter,opencv,huggingface&theme=dark&perline=6" alt="Python, PyTorch, TensorFlow, Jupyter, OpenCV and Hugging Face" />
+</p>
+<p align="center"><sub><strong>AI / ML</strong> — modelling · training loops · evaluation · notebooks · artifacts</sub></p>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=ts,js,react,vite,nodejs,express,threejs,html,css&theme=dark&perline=6" alt="TypeScript, JavaScript, React, Vite, Node.js, Express, Three.js, HTML and CSS" />
+</p>
+<p align="center"><sub><strong>WEB / REALTIME</strong> — typed frontends · APIs · WebSockets · 3D in the browser</sub></p>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=postgres,mysql,redis,docker,git,github,githubactions,linux,bash&theme=dark&perline=6" alt="PostgreSQL, MySQL, Redis, Docker, Git, GitHub Actions, Linux and Bash" />
+</p>
+<p align="center"><sub><strong>DATA / PLATFORM</strong> — schemas · CI · containers · deployment · reproducibility</sub></p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Generative%20Models-diffusion%20%C2%B7%20transformers-7C3AED?style=flat-square" alt="Generative models: diffusion and transformers" />
@@ -149,22 +133,12 @@
 
 <img src="assets/header-05-collaborate.svg" alt="Section 05: Let's collaborate" width="600" />
 
-<table width="100%">
-  <tr>
-    <td width="33%" valign="top">
-      <h3>🔬 Research</h3>
-      <p>Generative models, training stability, latent representations, evaluation, low-compute experiment design — and honest write-ups of what did not work.</p>
-    </td>
-    <td width="34%" valign="top">
-      <h3>🛠️ Build</h3>
-      <p>AI-powered products, realtime features, typed APIs, 3D interfaces, data pipelines and the deployment plumbing that turns a demo into a product.</p>
-    </td>
-    <td width="33%" valign="top">
-      <h3>🤝 Early-career</h3>
-      <p>Internships and junior AI/engineering roles where I can contribute hands-on from week one, review code seriously and keep improving in public.</p>
-    </td>
-  </tr>
-</table>
+- 🔬 **Research** — Generative models, training stability, latent representations, evaluation,
+  low-compute experiment design — and honest write-ups of what did not work.
+- 🛠️ **Build** — AI-powered products, realtime features, typed APIs, 3D interfaces, data pipelines and
+  the deployment plumbing that turns a demo into a product.
+- 🤝 **Early-career** — Internships and junior AI/engineering roles where I can contribute hands-on from
+  week one, review code seriously and keep improving in public.
 
 <p align="center">
   <a href="mailto:rishirajc406@gmail.com"><img src="https://img.shields.io/badge/Work%20with%20me-send%20an%20email-7C3AED?style=for-the-badge&logo=gmail&logoColor=white" alt="Send an email to work together" /></a>
