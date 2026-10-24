@@ -90,8 +90,23 @@ def build(cal: dict) -> str:
 
     el = []
     # milky-way band
-    el.append('    <ellipse cx="600" cy="220" rx="560" ry="86" fill="#818cf8" opacity=".07" '
-              'filter="url(#cblur)" transform="rotate(-7 600 220)"/>')
+    el.append('    <g><animateTransform attributeName="transform" type="translate" '
+              'values="0 0;26 -8;0 0" dur="22s" repeatCount="indefinite"/>'
+              '<ellipse cx="600" cy="220" rx="560" ry="86" fill="#818cf8" opacity=".07" '
+              'filter="url(#cblur)" transform="rotate(-7 600 220)">'
+              '<animate attributeName="opacity" values=".07;.12;.07" dur="9s" repeatCount="indefinite"/>'
+              '</ellipse></g>')
+    # two comets cross the sky on long loops
+    el.append('    <g opacity="0">'
+              '<animate attributeName="opacity" values="0;.9;.9;0" keyTimes="0;.08;.75;1" dur="12s" begin="2.5s" repeatCount="indefinite"/>'
+              '<line x1="-64" y1="312" x2="-22" y2="300" stroke="#a5f3fc" stroke-width="1.6" stroke-linecap="round" stroke-opacity=".8"/>'
+              '<circle cx="-22" cy="300" r="2.6" fill="#e0f2fe"/>'
+              '<animateTransform attributeName="transform" type="translate" values="0 0;1330 -130" dur="12s" begin="2.5s" repeatCount="indefinite"/></g>')
+    el.append('    <g opacity="0">'
+              '<animate attributeName="opacity" values="0;.8;.8;0" keyTimes="0;.08;.75;1" dur="15s" begin="9s" repeatCount="indefinite"/>'
+              '<line x1="1268" y1="330" x2="1226" y2="318" stroke="#c4b5fd" stroke-width="1.4" stroke-linecap="round" stroke-opacity=".8"/>'
+              '<circle cx="1226" cy="318" r="2.2" fill="#ede9fe"/>'
+              '<animateTransform attributeName="transform" type="translate" values="0 0;-1440 -150" dur="15s" begin="9s" repeatCount="indefinite"/></g>')
 
     # month gridlines + labels
     for m in ticks:
@@ -111,25 +126,29 @@ def build(cal: dict) -> str:
         el.append(f'    <polyline points="{pts}" fill="none" '
                   f'stroke="{"#c4b5fd" if hot else "#22d3ee"}" '
                   f'stroke-opacity="{".8" if hot else ".3"}" stroke-width="{2.2 if hot else 1.2}" '
-                  f'stroke-linecap="round" stroke-linejoin="round"/>')
+                  f'stroke-linecap="round" stroke-linejoin="round" '
+                  f'stroke-dasharray="{"9 7" if hot else "5 9"}">'
+                  f'<animate attributeName="stroke-dashoffset" values="0;{"-64" if hot else "-56"}" '
+                  f'dur="{2.2 if hot else 3.0}s" repeatCount="indefinite"/></polyline>')
 
     # stars
     for i, (date, (x, y, c)) in enumerate(sorted(stars.items())):
         r = star_radius(c)
         colour = tier(c)
-        if c >= 8:  # glow halo for bright nights
+        if c >= 8:  # glow halo for bright nights, breathing
             el.append(f'    <circle cx="{x:.1f}" cy="{y:.1f}" r="{r * 2.4:.1f}" fill="{colour}" '
-                      f'opacity=".16" filter="url(#cblur)"/>')
-        el.append(f'    <circle cx="{x:.1f}" cy="{y:.1f}" r="{r:.1f}" fill="{colour}" fill-opacity=".95"/>')
-        el.append(f'    <circle cx="{x:.1f}" cy="{y:.1f}" r="{max(r * .38, 1):.1f}" fill="#ffffff" opacity=".9"/>')
-        if i % 5 == 0:  # a few twinkle, forever
-            el.append(f'    <circle cx="{x:.1f}" cy="{y:.1f}" r="{r + 3:.1f}" fill="none" '
-                      f'stroke="{colour}" stroke-opacity=".5">'
-                      f'<animate attributeName="opacity" values=".6;0;.6" dur="{2.4 + (i % 4) * .7:.1f}s" '
-                      f'repeatCount="indefinite"/></circle>')
+                      f'opacity=".16" filter="url(#cblur)">'
+                      f'<animate attributeName="opacity" values=".16;.28;.16" dur="{3.4 + (i % 3) * 1.1:.1f}s" '
+                      f'begin="{(i % 5) * .5:.1f}s" repeatCount="indefinite"/></circle>')
+        el.append(f'    <circle cx="{x:.1f}" cy="{y:.1f}" r="{r:.1f}" fill="{colour}" fill-opacity=".95">'
+                  f'<animate attributeName="opacity" values="1;.62;1" dur="{2.1 + (i % 6) * .55:.1f}s" '
+                  f'begin="{(i % 8) * .37:.1f}s" repeatCount="indefinite"/></circle>')
+        el.append(f'    <circle cx="{x:.1f}" cy="{y:.1f}" r="{max(r * .38, 1):.1f}" fill="#ffffff" opacity=".9">'
+                  f'<animate attributeName="opacity" values=".9;.5;.9" dur="{2.1 + (i % 6) * .55:.1f}s" '
+                  f'begin="{(i % 8) * .37:.1f}s" repeatCount="indefinite"/></circle>')
 
     # cross flares + labels on the three biggest nights
-    for d in top3:
+    for k, d in enumerate(top3):
         x, y, c = stars[d["date"]]
         lab = dt.date.fromisoformat(d["date"]).strftime("%b %d").upper()
         el.append(f'    <g stroke="#f5f3ff" stroke-opacity=".8" stroke-width="1.2">'
@@ -137,6 +156,10 @@ def build(cal: dict) -> str:
                   f'<line x1="{x + 9:.0f}" y1="{y:.0f}" x2="{x + 18:.0f}" y2="{y:.0f}"/>'
                   f'<line x1="{x:.0f}" y1="{y - 18:.0f}" x2="{x:.0f}" y2="{y - 9:.0f}"/>'
                   f'<line x1="{x:.0f}" y1="{y + 9:.0f}" x2="{x:.0f}" y2="{y + 18:.0f}"/></g>')
+        el.append(f'    <circle cx="{x:.1f}" cy="{y:.1f}" r="6" fill="none" stroke="#f5f3ff" '
+                  f'stroke-opacity=".7" stroke-width="1.2">'
+                  f'<animate attributeName="r" values="6;30" dur="4.6s" begin="{k * 1.5:.1f}s" repeatCount="indefinite"/>'
+                  f'<animate attributeName="stroke-opacity" values=".7;0" dur="4.6s" begin="{k * 1.5:.1f}s" repeatCount="indefinite"/></circle>')
         side = 1 if x < W - 190 else -1
         tx = x + side * 26
         el.append(f'    <text x="{tx:.0f}" y="{y - 12:.0f}" text-anchor="{"start" if side > 0 else "end"}" '
