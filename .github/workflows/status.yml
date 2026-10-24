@@ -1,0 +1,43 @@
+# Regenerates the LIVE status pill referenced by README.md.
+#
+# Published to the orphan `live` branch (deliberately separate from the snake's
+# `output` branch so the two workflows can never clobber each other):
+#   https://raw.githubusercontent.com/Rishidev-20thcenturey/Rishidev-20thcenturey/live/status.svg
+#
+# Runs hourly, on every push to main, and on demand.
+name: Live status badge
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out the generators
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Render status.svg from the live GitHub API
+        run: python tools/gen_status.py --out dist/status.svg
+
+      - name: Publish to the live branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: live
+          build_dir: dist
+          keep_history: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

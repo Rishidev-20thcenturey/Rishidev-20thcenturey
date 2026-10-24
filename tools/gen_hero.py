@@ -51,16 +51,19 @@ def node_points(idx):
 
 def build() -> str:
     edges = "\n".join(
-        f'    <line x1="{NODES[a][0]}" y1="{NODES[a][1]}" x2="{NODES[b][0]}" y2="{NODES[b][1]}"/>'
-        for a, b in EDGES
+        f'    <line x1="{NODES[a][0]}" y1="{NODES[a][1]}" x2="{NODES[b][0]}" y2="{NODES[b][1]}" '
+        f'pathLength="1" stroke-dasharray="1" stroke-dashoffset="1">'
+        f'<animate attributeName="stroke-dashoffset" values="1;0" begin="{0.25 + i * 0.035:.2f}s" dur="0.5s" fill="freeze"/></line>'
+        for i, (a, b) in enumerate(EDGES)
     )
     dots = "\n".join(
-        f'    <circle cx="{x}" cy="{y}" r="{3.6 if i % 3 else 4.6}"/>'
+        f'    <circle cx="{x}" cy="{y}" r="{3.6 if i % 3 else 4.6}" opacity="0">'
+        f'<animate attributeName="opacity" values="0;.9" begin="{0.10 + i * 0.05:.2f}s" dur="0.35s" fill="freeze"/></circle>'
         for i, (x, y) in enumerate(NODES)
     )
     traces = "\n".join(
         f'''    <polyline points="{node_points(t)}" stroke-dasharray="110 900">
-      <animate attributeName="stroke-dashoffset" values="1010;-160" dur="{4.6 + i * 1.3}s" begin="{i * 0.9}s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-dashoffset" values="1010;-160" dur="{4.6 + i * 1.3}s" begin="{2.2 + i * 0.9}s" repeatCount="indefinite"/>
     </polyline>'''
         for i, t in enumerate(TRACES)
     )
@@ -164,7 +167,8 @@ def build() -> str:
     <g fill="none" stroke="#a5f3fc" stroke-width="2.2" stroke-opacity=".8" stroke-linecap="round" stroke-linejoin="round">
 {traces}
     </g>
-    <g fill="#c4b5fd">
+    <g fill="#c4b5fd" opacity="0">
+      <animate attributeName="opacity" values="0;1" begin="0.9s" dur="0.5s" fill="freeze"/>
       <circle cx="1226" cy="214" r="3" filter="url(#tight)">
         <animate attributeName="opacity" values=".2;1;.2" dur="3.4s" repeatCount="indefinite"/>
       </circle>
@@ -175,7 +179,8 @@ def build() -> str:
     <rect x="700" y="0" width="740" height="{H}" fill="url(#fadeRight)" opacity=".55"/>
 
     <!-- monogram medallion: the identity anchor, drawn over the network -->
-    <g>
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;1" begin="0.7s" dur="0.6s" fill="freeze"/>
       <circle cx="{MX}" cy="{MY}" r="122" fill="#7c3aed" opacity=".2" filter="url(#soft)"/>
       <circle cx="{MX}" cy="{MY}" r="108" fill="none" stroke="url(#accent)" stroke-opacity=".5" stroke-width="1.6" stroke-dasharray="4 11">
         <animateTransform attributeName="transform" type="rotate" values="0 {MX} {MY};360 {MX} {MY}" dur="46s" repeatCount="indefinite"/>
@@ -198,6 +203,8 @@ def build() -> str:
     </g>
 
     <!-- status chip -->
+    <g opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="0.15s" dur="0.4s" fill="freeze"/>
     <rect x="74" y="48" width="330" height="34" rx="17" fill="#0e1a30" stroke="#2f4a6d"/>
     <circle cx="96" cy="65" r="5" fill="#34d399">
       <animate attributeName="opacity" values="1;.25;1" dur="2.1s" repeatCount="indefinite"/>
@@ -209,27 +216,40 @@ def build() -> str:
     <text x="112" y="70" font-size="11.5" font-weight="700" letter-spacing="2.4" fill="#a9c4e4">OPEN TO COLLABORATE</text>
     <rect x="300" y="57" width="90" height="17" rx="8.5" fill="#132a44" stroke="#3a5c82"/>
     <text x="345" y="69" text-anchor="middle" font-size="9.5" font-weight="800" letter-spacing="1.4" fill="#7dd3fc">2026</text>
+    </g>
 
-    <!-- name -->
-    <text x="74" y="182" font-size="68" font-weight="800" letter-spacing="-1.6" fill="url(#nameFill)">RISHI RAJ DEV</text>
+    <!-- name: chromatic decode-in, ghosts converge then the real type locks -->
+    <text x="60" y="182" font-size="68" font-weight="800" letter-spacing="-1.6" fill="#22d3ee" opacity=".85">RISHI RAJ DEV<animate attributeName="x" values="60;74" begin="0s" dur="1.1s" fill="freeze"/><animate attributeName="opacity" values=".85;.85;0" keyTimes="0;.55;1" begin="0s" dur="1.1s" fill="freeze"/></text>
+    <text x="88" y="182" font-size="68" font-weight="800" letter-spacing="-1.6" fill="#f0abfc" opacity=".85">RISHI RAJ DEV<animate attributeName="x" values="88;74" begin="0s" dur="1.1s" fill="freeze"/><animate attributeName="opacity" values=".85;.85;0" keyTimes="0;.55;1" begin="0s" dur="1.1s" fill="freeze"/></text>
+    <text x="74" y="182" font-size="68" font-weight="800" letter-spacing="-1.6" fill="url(#nameFill)" opacity="0">RISHI RAJ DEV<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;.4;.85;1" begin="0s" dur="1.2s" fill="freeze"/></text>
+    <rect x="74" y="128" width="{NAME_W}" height="3" fill="#67e8f9" opacity="0">
+      <animate attributeName="opacity" values="0;.9;0;0" keyTimes="0;.18;.34;1" begin="0.3s" dur="1s" fill="freeze"/>
+    </rect>
+    <rect x="74" y="168" width="{NAME_W}" height="2" fill="#f0abfc" opacity="0">
+      <animate attributeName="opacity" values="0;.8;0;0" keyTimes="0;.22;.4;1" begin="0.55s" dur="1s" fill="freeze"/>
+    </rect>
     <g clip-path="url(#nameClip)">
       <rect x="-340" y="118" width="210" height="80" fill="url(#shine)" opacity=".55">
-        <animate attributeName="x" values="-340;{NAME_W + 180}" dur="5.5s" repeatCount="indefinite"/>
+        <animate attributeName="x" values="-340;{NAME_W + 180}" begin="2.4s" dur="5.5s" repeatCount="indefinite"/>
       </rect>
     </g>
 
     <!-- animated gradient rail -->
-    <rect x="76" y="202" width="{NAME_W - 2}" height="6" rx="3" fill="url(#accent)"/>
+    <rect x="76" y="202" width="0" height="6" rx="3" fill="url(#accent)"><animate attributeName="width" values="0;{NAME_W - 2}" begin="0.8s" dur="0.6s" fill="freeze"/></rect>
 
     <!-- role line -->
+    <g opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="1.0s" dur="0.5s" fill="freeze"/>
     <text x="74" y="249" font-size="22" font-weight="600" fill="#e2ecfb">AI / ML / AGI Researcher</text>
     <text x="326" y="249" font-size="22" font-weight="600" fill="#4f6a8c">·</text>
     <text x="346" y="249" font-size="22" font-weight="600" fill="#e2ecfb">Generative Models</text>
     <text x="524" y="249" font-size="22" font-weight="600" fill="#4f6a8c">·</text>
     <text x="544" y="249" font-size="22" font-weight="600" fill="#e2ecfb">Full-Stack Engineering</text>
+    </g>
 
     <!-- stack tags -->
-    <g font-family="{MONO}" font-size="12" font-weight="600" letter-spacing=".2">
+    <g font-family="{MONO}" font-size="12" font-weight="600" letter-spacing=".2" opacity="0">
+      <animate attributeName="opacity" values="0;1" begin="1.15s" dur="0.5s" fill="freeze"/>
       <rect x="74" y="276" width="204" height="30" rx="8" fill="#0d1729" fill-opacity=".9" stroke="#2b4468"/>
       <text x="88" y="296" fill="#7dd3fc">python · pytorch</text>
       <rect x="290" y="276" width="238" height="30" rx="8" fill="#0d1729" fill-opacity=".9" stroke="#2b4468"/>
@@ -237,12 +257,15 @@ def build() -> str:
       <rect x="540" y="276" width="192" height="30" rx="8" fill="#0d1729" fill-opacity=".9" stroke="#2b4468"/>
       <text x="554" y="296" fill="#5eead4">ai / ml research</text>
     </g>
-    <text x="74" y="325" font-size="12" font-weight="600" letter-spacing="2.6" fill="#7d97b8">BUILD CAREFULLY   /   MEASURE HONESTLY   /   KEEP SHIPPING</text>
+    <text x="74" y="325" font-size="12" font-weight="600" letter-spacing="2.6" fill="#7d97b8" opacity="0">BUILD CAREFULLY   /   MEASURE HONESTLY   /   KEEP SHIPPING<animate attributeName="opacity" values="0;1" begin="1.3s" dur="0.5s" fill="freeze"/></text>
 
     <!-- stats band -->
+    <g opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="1.25s" dur="0.6s" fill="freeze"/>
     <line x1="60" y1="356" x2="1380" y2="356" stroke="#8fb3dd" stroke-opacity=".16"/>
     <rect x="60" y="357" width="1320" height="72" rx="18" fill="#080e1d" fill-opacity=".55" stroke="#7f9dc4" stroke-opacity=".12"/>
 {stats_block}
+    </g>
 
     <rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="25" fill="none" stroke="#9db8dd" stroke-opacity=".22"/>
     <rect x="0" y="{H - 6}" width="{W}" height="6" rx="3" fill="url(#accent)"/>

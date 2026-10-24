@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-labelledby="ct cd">
+  <title id="ct">Commit constellation: 263 contributions across 25 active days across the recorded era</title>
+  <desc id="cd">A star map where each star is one day of real commit activity, sized by volume, with lines connecting consecutive days and the longest streak highlighted. Derived from live GitHub contribution data, so the pattern is unique to its owner.</desc>
+  <defs>
+    <linearGradient id="cbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060a16"/>
+      <stop offset="55%" stop-color="#0b1024"/>
+      <stop offset="100%" stop-color="#071522"/>
+    </linearGradient>
+    <linearGradient id="crail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#2dd4bf"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-300 0;300 0;-300 0" dur="9s" repeatCount="indefinite"/>
+    </linearGradient>
+    <filter id="cblur" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="16"/></filter>
+    <clipPath id="cframe"><rect width="1200" height="440" rx="20"/></clipPath>
+  </defs>
+  <g clip-path="url(#cframe)" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+    <rect width="1200" height="440" fill="url(#cbg)"/>
+    <ellipse cx="600" cy="220" rx="560" ry="86" fill="#818cf8" opacity=".07" filter="url(#cblur)" transform="rotate(-7 600 220)"/>
+    <line x1="358" y1="82" x2="358" y2="366" stroke="#8fb3dd" stroke-opacity=".10"/>
+    <text x="358" y="386" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="10" font-weight="600" letter-spacing="1.6" fill="#5c7595">AUG</text>
+    <line x1="647" y1="82" x2="647" y2="366" stroke="#8fb3dd" stroke-opacity=".10"/>
+    <text x="647" y="386" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="10" font-weight="600" letter-spacing="1.6" fill="#5c7595">SEP</text>
+    <line x1="926" y1="82" x2="926" y2="366" stroke="#8fb3dd" stroke-opacity=".10"/>
+    <text x="926" y="386" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="10" font-weight="600" letter-spacing="1.6" fill="#5c7595">OCT</text>
+    <polyline points="702.7,146.7 712.0,154.8 721.3,215.6 730.6,271.0 739.9,285.0 749.2,251.2 758.5,173.7 767.8,258.2 777.1,280.6" fill="none" stroke="#c4b5fd" stroke-opacity=".8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline points="842.3,303.5 851.6,281.1" fill="none" stroke="#22d3ee" stroke-opacity=".3" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline points="1000.4,195.3 1009.7,167.5 1019.0,240.8" fill="none" stroke="#22d3ee" stroke-opacity=".3" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline points="1037.7,123.3 1047.0,283.7 1056.3,122.0 1065.6,199.5" fill="none" stroke="#22d3ee" stroke-opacity=".3" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline points="1130.7,96.5 1140.0,239.8" fill="none" stroke="#22d3ee" stroke-opacity=".3" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="107.2" cy="186.5" r="3.6" fill="#7d95c9" fill-opacity=".95"/>
+    <circle cx="107.2" cy="186.5" r="1.4" fill="#ffffff" opacity=".9"/>
+    <circle cx="107.2" cy="186.5" r="6.7" fill="none" stroke="#7d95c9" stroke-opacity=".5"><animate attributeName="opacity" values=".6;0;.6" dur="2.4s" repeatCount="indefinite"/></circle>
+    <circle cx="284.0" cy="108.5" r="3.6" fill="#7d95c9" fill-opacity=".95"/>
+    <circle cx="284.0" cy="108.5" r="1.4" fill="#ffffff" opacity=".9"/>
+    <circle cx="349.1" cy="197.4" r="3.6" fill="#7d95c9" fill-opacity=".95"/>
+    <circle cx="349.1" cy="197.4" r="1.4" fill="#ffffff" opacity=".9"/>
+    <circle cx="609.7" cy="209.6" r="5.8" fill="#7d95c9" fill-opacity=".95"/>
+    <circle cx="609.7" cy="209.6" r="2.2" fill="#ffffff" opacity=".9"/>
+    <circle cx="702.7" cy="146.7" r="28.8" fill="#f5f3ff" opacity=".16" filter="url(#cblur)"/>
+    <circle cx="702.7" cy="146.7" r="12.0" fill="#f5f3ff" fill-opacity=".95"/>
+    <circle cx="702.7" cy="146.7" r="4.6" fill="#ffffff" opacity=".9"/>
+    <circle cx="712.0" cy="154.8" r="20.8" fill="#67e8f9" opacity=".16" filter="url(#cblur)"/>
+    <circle cx="712.0" cy="154.8" r="8.7" fill="#67e8f9" fill-opacity=".95"/>
+    <circle cx="712.0" cy="154.8" r="3.3" fill="#ffffff" opacity=".9"/>
+    <circle cx="712.0" cy="154.8" r="11.7" fill="none" stroke="#67e8f9" stroke-opacity=".5"><animate attributeName="opacity" values=".6;0;.6" dur="3.1s" repeatCount="indefinite"/></circle>
+    <circle cx="721.3" cy="215.6" r="3.6" fill="#7d95c9" fill-opacity=".95"/>
+    <circle cx="721.3" cy="215.6" r="1.4" fill="#ffffff" opacity=".9"/>
+    <circle cx="730.6" cy="271.0" r="18.5" fill="#67e8f9" opacity=".16" filter="url(#cblur)"/>
+    <circle cx="730.6" cy="271.0" r="7.7" fill="#67e8f9" fill-opacity=".95"/>
+    <circle cx="730.6" cy="271.0" r="2.9" fill="#ffffff" opacity=".9"/>
+    <circle cx="739.9" cy="285.0" r="4.4" fill="#7d95c9" fill-opacity=".95"/>
+    <circle cx="739.9" cy="285.0" r="1.7" fill="#ffffff" opacity=".9"/>
+    <circle cx="749.2" cy="251.2" r="22.4" fill="#67e8f9" opacity=".16" filter="url(#cblur)"/>
+    <circle cx="749.2" cy="251.2" r="9.3" fill="#67e8f9" fill-opacity=".95"/>
+    <circle cx="749.2" cy="251.2" r="3.5" fill="#ffffff" opacity=".9"/>
+    <circle cx="758.5" cy="173.7" r="16.4" fill="#67e8f9" opacity=".16" filter="url(#cblur)"/>
+    <circle cx="758.5" cy="173.7" r="6.8" fill="#67e8f9" fill-opacity=".95"/>
+    <circle cx="758.5" cy="173.7" r="2.6" fill="#ffffff" opacity=".9"/>
+    <circle cx="758.5" cy="173.7" r="9.8" fill="none" stroke="#67e8f9" stroke-opacity=".5"><animate attributeName="opacity" values=".6;0;.6" dur="3.8s" repeatCount="indefinite"/></circle>
+    <circle cx="767.8" cy="258.2" r="4.9" fill="#7d95c9" fill-opacity=".95"/>
+    <circle cx="767.8" cy="258.2" r="1.9" fill="#ffffff" opacity=".9"/>
+    <circle cx="777.1" cy="280.6" r="26.4" fill="#f5f3ff" opacity=".16" filter="url(#cblur)"/>
+    <circle cx="777.1" cy="280.6" r="11.0" fill="#f5f3ff" fill-opacity=".95"/>
+    <circle cx="777.1" cy="280.6" r="4.2" fill="#ffffff" opacity=".9"/>
+    <circle cx="842.3" cy="303.5" r="3.6" fill="#7d95c9" fill-opacity=".95"/>
+    <circle cx="842.3" cy="303.5" r="1.4" fill="#ffffff" opacity=".9"/>
+    <circle cx="851.6" cy="281.1" r="16.4" fill="#67e8f9" opacity=".16" filter="url(#cblur)"/>
+    <circle cx="851.6" cy="281.1" r="6.8" fill="#67e8f9" fill-opacity=".95"/>
+    <circle cx="851.6" cy="281.1" r="2.6" fill="#ffffff" opacity=".9"/>
+    <circle cx="1000.4" cy="195.3" r="5.4" fill="#7d95c9" fill-opacity=".95"/>
+    <circle cx="1000.4" cy="195.3" r="2.1" fill="#ffffff" opacity=".9"/>
+    <circle cx="1000.4" cy="195.3" r="8.4" fill="none" stroke="#7d95c9" stroke-opacity=".5"><animate attributeName="opacity" values=".6;0;.6" dur="4.5s" repeatCount="indefinite"/></circle>
+    <circle cx="1009.7" cy="167.5" r="22.4" fill="#67e8f9" opacity=".16" filter="url(#cblur)"/>
+    <circle cx="1009.7" cy="167.5" r="9.3" fill="#67e8f9" fill-opacity=".95"/>
+    <circle cx="1009.7" cy="167.5" r="3.5" fill="#ffffff" opacity=".9"/>
+    <circle cx="1019.0" cy="240.8" r="24.7" fill="#f5f3ff" opacity=".16" filter="url(#cblur)"/>
+    <circle cx="1019.0" cy="240.8" r="10.3" fill="#f5f3ff" fill-opacity=".95"/>
+    <circle cx="1019.0" cy="240.8" r="3.9" fill="#ffffff" opacity=".9"/>
+    <circle cx="1037.7" cy="123.3" r="24.3" fill="#f5f3ff" opacity=".16" filter="url(#cblur)"/>
+    <circle cx="1037.7" cy="123.3" r="10.1" fill="#f5f3ff" fill-opacity=".95"/>
+    <circle cx="1037.7" cy="123.3" r="3.8" fill="#ffffff" opacity=".9"/>
+    <circle cx="1047.0" cy="283.7" r="3.6" fill="#7d95c9" fill-opacity=".95"/>
+    <circle cx="1047.0" cy="283.7" r="1.4" fill="#ffffff" opacity=".9"/>
+    <circle cx="1056.3" cy="122.0" r="5.8" fill="#7d95c9" fill-opacity=".95"/>
+    <circle cx="1056.3" cy="122.0" r="2.2" fill="#ffffff" opacity=".9"/>
+    <circle cx="1056.3" cy="122.0" r="8.8" fill="none" stroke="#7d95c9" stroke-opacity=".5"><animate attributeName="opacity" values=".6;0;.6" dur="2.4s" repeatCount="indefinite"/></circle>
+    <circle cx="1065.6" cy="199.5" r="26.8" fill="#f5f3ff" opacity=".16" filter="url(#cblur)"/>
+    <circle cx="1065.6" cy="199.5" r="11.2" fill="#f5f3ff" fill-opacity=".95"/>
+    <circle cx="1065.6" cy="199.5" r="4.2" fill="#ffffff" opacity=".9"/>
+    <circle cx="1084.2" cy="264.7" r="3.6" fill="#7d95c9" fill-opacity=".95"/>
+    <circle cx="1084.2" cy="264.7" r="1.4" fill="#ffffff" opacity=".9"/>
+    <circle cx="1130.7" cy="96.5" r="17.2" fill="#67e8f9" opacity=".16" filter="url(#cblur)"/>
+    <circle cx="1130.7" cy="96.5" r="7.2" fill="#67e8f9" fill-opacity=".95"/>
+    <circle cx="1130.7" cy="96.5" r="2.7" fill="#ffffff" opacity=".9"/>
+    <circle cx="1140.0" cy="239.8" r="17.2" fill="#67e8f9" opacity=".16" filter="url(#cblur)"/>
+    <circle cx="1140.0" cy="239.8" r="7.2" fill="#67e8f9" fill-opacity=".95"/>
+    <circle cx="1140.0" cy="239.8" r="2.7" fill="#ffffff" opacity=".9"/>
+    <g stroke="#f5f3ff" stroke-opacity=".8" stroke-width="1.2"><line x1="685" y1="147" x2="694" y2="147"/><line x1="712" y1="147" x2="721" y2="147"/><line x1="703" y1="129" x2="703" y2="138"/><line x1="703" y1="156" x2="703" y2="165"/></g>
+    <text x="729" y="135" text-anchor="start" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="10.5" font-weight="700" letter-spacing=".6" fill="#e9d5ff">SEP 07 · 41</text>
+    <g stroke="#f5f3ff" stroke-opacity=".8" stroke-width="1.2"><line x1="1048" y1="199" x2="1057" y2="199"/><line x1="1075" y1="199" x2="1084" y2="199"/><line x1="1066" y1="181" x2="1066" y2="190"/><line x1="1066" y1="208" x2="1066" y2="217"/></g>
+    <text x="1040" y="187" text-anchor="end" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="10.5" font-weight="700" letter-spacing=".6" fill="#e9d5ff">OCT 16 · 28</text>
+    <g stroke="#f5f3ff" stroke-opacity=".8" stroke-width="1.2"><line x1="759" y1="281" x2="768" y2="281"/><line x1="786" y1="281" x2="795" y2="281"/><line x1="777" y1="263" x2="777" y2="272"/><line x1="777" y1="290" x2="777" y2="299"/></g>
+    <text x="803" y="269" text-anchor="start" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="10.5" font-weight="700" letter-spacing=".6" fill="#e9d5ff">SEP 15 · 27</text>
+    <text x="740" y="121" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="10.5" font-weight="700" letter-spacing="1.4" fill="#c4b5fd">LONGEST RUN · 9 NIGHTS</text>
+    <text x="70" y="52" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="15" font-weight="700" letter-spacing="2.6" fill="#eef4ff">COMMIT CONSTELLATION</text>
+    <text x="70" y="72" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="10.5" font-weight="600" letter-spacing="1.6" fill="#7d95b5">263 CONTRIBUTIONS · 25 ACTIVE NIGHTS · 5 STREAK RUNS · 116 DAYS</text>
+    <rect x="1024" y="34" width="106" height="24" rx="12" fill="#0b1424" stroke="#a855f7" stroke-opacity=".5"/>
+    <text x="1077" y="50" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="9.5" font-weight="800" letter-spacing="1.6" fill="#c4b5fd">ONE-OF-ONE</text>
+    <text x="600" y="424" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="10" font-weight="600" letter-spacing="1.3" fill="#5c7595">EACH STAR = ONE DAY I SHIPPED · SIZE = VOLUME · LINES = CONSECUTIVE NIGHTS · PLOTTED FROM LIVE GITHUB DATA</text>
+    <rect x="1" y="1" width="1198" height="438" rx="19" fill="none" stroke="#8fb3dd" stroke-opacity=".2"/>
+    <rect x="0" y="435" width="1200" height="5" rx="2.5" fill="url(#crail)"/>
+  </g>
+</svg>

@@ -6,6 +6,8 @@
   Every piece of artwork in ./assets is generated — never hand-edited:
     python3 tools/gen_hero.py        -> assets/profile-hero.svg
     python3 tools/gen_assets.py      -> assets/header-*.svg, divider.svg, terminal.svg
+    python3 tools/gen_constellation.py -> assets/constellation.svg (needs tools/constellation-data.json)
+    python3 tools/gen_status.py      -> dist/status.svg (published to the `live` branch by CI, hourly)
 -->
 
 <p align="center">
@@ -23,10 +25,7 @@
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Rishidev-20thcenturey&style=flat-square&color=0EA5E9&label=profile+visits" alt="Profile visit counter" />
-  <a href="https://github.com/Rishidev-20thcenturey?tab=followers"><img src="https://img.shields.io/github/followers/Rishidev-20thcenturey?style=flat-square&color=7C3AED&label=followers" alt="GitHub followers" /></a>
-  <img src="https://img.shields.io/github/stars/Rishidev-20thcenturey?affiliations=OWNER&style=flat-square&color=2DD4BF&label=stars+earned" alt="Stars earned across my own repositories" />
-  <img src="https://img.shields.io/badge/status-open%20to%20collaborate-34D399?style=flat-square" alt="Status: open to collaborate" />
+  <img src="https://raw.githubusercontent.com/Rishidev-20thcenturey/Rishidev-20thcenturey/live/status.svg" alt="Live status pill: local time in Kolkata, days into the journey, public repositories, stars and followers — regenerated hourly by GitHub Actions" width="100%" />
 </p>
 
 <p align="center">
@@ -114,6 +113,11 @@ with evidence.
   <img height="168" src="https://github-readme-stats.vercel.app/api?username=Rishidev-20thcenturey&show_icons=true&include_all_commits=true&count_private=true&rank_icon=github&theme=tokyonight&hide_border=true" alt="GitHub statistics for Rishidev-20thcenturey" />
   <img height="168" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Rishidev-20thcenturey&layout=compact&langs_count=8&theme=tokyonight&hide_border=true" alt="Most-used languages across public repositories" />
 </p>
+
+<p align="center">
+  <img src="assets/constellation.svg" alt="Commit constellation: one star per active day sized by contribution volume, faint lines connecting consecutive nights, the longest run highlighted and the three biggest nights flared and labelled — plotted from my real contribution history" width="100%" />
+</p>
+<p align="center"><sub>one star per night I shipped · size = volume · lines = consecutive nights · this sky is my actual commit history, so it is one-of-one by construction</sub></p>
 
 <p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Rishidev-20thcenturey&theme=tokyonight" alt="Contribution profile details and activity over time" width="100%" />
