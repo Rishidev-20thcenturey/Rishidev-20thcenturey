@@ -24,6 +24,20 @@ STATS = [
     ("WORLDWIDE", "OPEN TO COLLABORATE"),
 ]
 
+import random as _random
+
+_rng = _random.Random(7)
+# neural mesh baked into the letterforms of the name (bbox x 78..660, y 132..188)
+MESH_NODES = [(round(_rng.uniform(78, 660), 1), round(_rng.uniform(132, 188), 1)) for _ in range(46)]
+MESH_EDGES = [
+    (i, j)
+    for i in range(len(MESH_NODES))
+    for j in range(i + 1, len(MESH_NODES))
+    if ((MESH_NODES[i][0] - MESH_NODES[j][0]) ** 2 + (MESH_NODES[i][1] - MESH_NODES[j][1]) ** 2) ** 0.5 < 66
+]
+MESH_PULSES = MESH_EDGES[::11][:8]          # synapse fires travelling edge to edge
+MESH_FIRERS = list(range(2, len(MESH_NODES), 5))  # neurons that pulse in place
+
 NODES = [
     (928, 96), (1012, 58), (1092, 108), (1186, 66), (1272, 118), (1352, 76),
     (960, 168), (1052, 208), (1140, 160), (1226, 214), (1312, 168), (1382, 220),
@@ -79,6 +93,25 @@ def build() -> str:
                 f'    <line x1="{cx - 180}" y1="368" x2="{cx - 180}" y2="414" stroke="#7f9dc4" stroke-opacity=".18"/>'
             )
     stats_block = "\n".join(stats)
+
+    mesh_edges = "\n".join(
+        f'        <line x1="{MESH_NODES[a][0]}" y1="{MESH_NODES[a][1]}" x2="{MESH_NODES[b][0]}" y2="{MESH_NODES[b][1]}"/>'
+        for a, b in MESH_EDGES
+    )
+    mesh_nodes = "\n".join(
+        f'        <circle cx="{x}" cy="{y}" r="1.5"/>' for x, y in MESH_NODES
+    )
+    mesh_firers = "\n".join(
+        f'        <circle cx="{MESH_NODES[i][0]}" cy="{MESH_NODES[i][1]}" r="2.1" opacity=".2">'
+        f'<animate attributeName="opacity" values=".2;1;.2" dur="{1.8 + (i % 5) * 0.5:.1f}s" begin="{(i % 7) * 0.4:.1f}s" repeatCount="indefinite"/></circle>'
+        for i in MESH_FIRERS
+    )
+    mesh_pulses = "\n".join(
+        f'        <circle r="2.4" fill="{"#7c3aed" if k % 2 else "#22d3ee"}" opacity=".9">'
+        f'<animate attributeName="cx" values="{MESH_NODES[a][0]};{MESH_NODES[b][0]}" dur="{1.1 + k * 0.23:.2f}s" begin="{k * 0.5:.1f}s" repeatCount="indefinite"/>'
+        f'<animate attributeName="cy" values="{MESH_NODES[a][1]};{MESH_NODES[b][1]}" dur="{1.1 + k * 0.23:.2f}s" begin="{k * 0.5:.1f}s" repeatCount="indefinite"/></circle>'
+        for k, (a, b) in enumerate(MESH_PULSES)
+    )
 
     return f'''<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="heroTitle heroDesc">
@@ -218,10 +251,30 @@ def build() -> str:
     <text x="345" y="69" text-anchor="middle" font-size="9.5" font-weight="800" letter-spacing="1.4" fill="#7dd3fc">2026</text>
     </g>
 
-    <!-- name: chromatic decode-in, ghosts converge then the real type locks -->
-    <text x="60" y="182" font-size="68" font-weight="800" letter-spacing="-1.6" fill="#22d3ee" opacity=".85">RISHI RAJ DEV<animate attributeName="x" values="60;74" begin="0s" dur="1.1s" fill="freeze"/><animate attributeName="opacity" values=".85;.85;0" keyTimes="0;.55;1" begin="0s" dur="1.1s" fill="freeze"/></text>
-    <text x="88" y="182" font-size="68" font-weight="800" letter-spacing="-1.6" fill="#f0abfc" opacity=".85">RISHI RAJ DEV<animate attributeName="x" values="88;74" begin="0s" dur="1.1s" fill="freeze"/><animate attributeName="opacity" values=".85;.85;0" keyTimes="0;.55;1" begin="0s" dur="1.1s" fill="freeze"/></text>
+    <!-- name v4: permanent chromatic glaze + a living neural mesh inside the glyphs -->
+    <!-- 1. the glaze: blurred gradient halo, fades in once, then breathes forever -->
+    <text x="74" y="182" font-size="68" font-weight="800" letter-spacing="-1.6" fill="url(#accent)" filter="url(#tight)" opacity="0">RISHI RAJ DEV<animate attributeName="opacity" values="0;.55" begin="0.2s" dur="0.9s" fill="freeze"/><animate attributeName="opacity" values=".55;.78;.55" begin="1.4s" dur="4.2s" repeatCount="indefinite"/></text>
+    <!-- 2. chromatic ghosts: converge during the intro, then stay — permanently split, micro-jittering -->
+    <text x="60" y="182" font-size="68" font-weight="800" letter-spacing="-1.6" fill="#22d3ee" opacity=".85">RISHI RAJ DEV<animate attributeName="x" values="60;71" begin="0s" dur="1s" fill="freeze"/><animate attributeName="opacity" values=".85;.5" begin="0s" dur="1s" fill="freeze"/><animate attributeName="x" values="71;70.2;71.7;71" begin="1s" dur="3.2s" repeatCount="indefinite"/><animate attributeName="opacity" values=".5;.34;.5" begin="1s" dur="2.6s" repeatCount="indefinite"/></text>
+    <text x="88" y="182" font-size="68" font-weight="800" letter-spacing="-1.6" fill="#f0abfc" opacity=".85">RISHI RAJ DEV<animate attributeName="x" values="88;77" begin="0s" dur="1s" fill="freeze"/><animate attributeName="opacity" values=".85;.5" begin="0s" dur="1s" fill="freeze"/><animate attributeName="x" values="77;77.9;76.3;77" begin="1s" dur="3.8s" repeatCount="indefinite"/><animate attributeName="opacity" values=".5;.36;.5" begin="1.3s" dur="3.1s" repeatCount="indefinite"/></text>
+    <!-- 3. the crisp type -->
     <text x="74" y="182" font-size="68" font-weight="800" letter-spacing="-1.6" fill="url(#nameFill)" opacity="0">RISHI RAJ DEV<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;.4;.85;1" begin="0s" dur="1.2s" fill="freeze"/></text>
+    <!-- 4. neural mesh clipped to the letterforms: engraved synapses, firing neurons, travelling pulses -->
+    <g clip-path="url(#nameClip)" opacity="0">
+      <animate attributeName="opacity" values="0;1" begin="0.9s" dur="0.6s" fill="freeze"/>
+      <g stroke="#0e2a4d" stroke-opacity=".34" stroke-width="1">
+{mesh_edges}
+      </g>
+      <g fill="#0369a1" fill-opacity=".5">
+{mesh_nodes}
+      </g>
+      <g fill="#0ea5e9">
+{mesh_firers}
+      </g>
+      <g>
+{mesh_pulses}
+      </g>
+    </g>
     <rect x="74" y="128" width="{NAME_W}" height="3" fill="#67e8f9" opacity="0">
       <animate attributeName="opacity" values="0;.9;0;0" keyTimes="0;.18;.34;1" begin="0.3s" dur="1s" fill="freeze"/>
     </rect>
