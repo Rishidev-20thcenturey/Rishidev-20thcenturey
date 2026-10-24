@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="576" height="62" viewBox="0 0 576 62" role="img" aria-label="Section 05: LET'S COLLABORATE">
+  <defs>
+    <linearGradient id="hbg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0c1322"/>
+      <stop offset="72%" stop-color="#0c1322" stop-opacity=".45"/>
+      <stop offset="100%" stop-color="#0c1322" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="hnum" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="hrule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#34d399" stop-opacity=".75"/>
+      <stop offset="60%" stop-color="#22d3ee" stop-opacity=".22"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="576" height="62" rx="14" fill="url(#hbg)"/>
+  <rect x="14" y="14" width="46" height="34" rx="10" fill="url(#hnum)" fill-opacity=".16" stroke="#34d399" stroke-opacity=".5"/>
+  <text x="37" y="37" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="14" font-weight="700" fill="#22d3ee">05</text>
+  <text x="76" y="40" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="23" font-weight="800" letter-spacing="2.4" fill="#eef4ff">LET'S COLLABORATE</text>
+  <rect x="464" y="30" width="82" height="2.5" rx="1.25" fill="url(#hrule)"/>
+  <circle cx="560" cy="31" r="3.6" fill="#34d399">
+    <animate attributeName="opacity" values="1;.15;1" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+  <rect x="0" y="61" width="242" height="1" fill="#34d399" opacity=".35"/>
+</svg>
