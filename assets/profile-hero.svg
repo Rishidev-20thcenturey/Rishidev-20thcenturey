@@ -154,12 +154,89 @@
       <circle cx="1128" cy="168" r="108" fill="none" stroke="url(#accent)" stroke-opacity=".5" stroke-width="1.6" stroke-dasharray="4 11">
         <animateTransform attributeName="transform" type="rotate" values="0 1128 168;360 1128 168" dur="46s" repeatCount="indefinite"/>
       </circle>
+      <g fill="#67e8f9">
+        <animateTransform attributeName="transform" type="rotate" values="0 1128 168;360 1128 168" dur="46s" repeatCount="indefinite"/>
+        <circle cx="1236" cy="168" r="3.2"/>
+        <circle cx="1020" cy="168" r="2.4" fill="#c4b5fd"/>
+        <circle cx="1128" cy="276" r="2.6"/>
+        <circle cx="1128" cy="60" r="3" fill="#c4b5fd"/>
+      </g>
+      <g stroke="#67e8f9" stroke-opacity=".3" stroke-width="1.1">
+        <line x1="1092" y1="108" x2="1084.8" y2="96.0"/>
+        <line x1="1272" y1="118" x2="1207.4" y2="140.4"/>
+        <line x1="1140" y1="160" x2="1197.9" y2="121.4"/>
+        <line x1="1312" y1="168" x2="1212.0" y2="168.0"/>
+        <line x1="1096" y1="246" x2="1096.1" y2="245.7"/>
+        <line x1="1280" y1="250" x2="1201.9" y2="207.9"/>
+      </g>
+      <g>
+        <circle r="2.2" fill="#67e8f9" opacity=".85"><animate attributeName="cx" values="1092;1084.8" dur="2.4s" begin="0.0s" repeatCount="indefinite"/><animate attributeName="cy" values="108;96.0" dur="2.4s" begin="0.0s" repeatCount="indefinite"/><animate attributeName="opacity" values=".85;.85;0" keyTimes="0;.8;1" dur="2.4s" begin="0.0s" repeatCount="indefinite"/></circle>
+        <circle r="2.2" fill="#67e8f9" opacity=".85"><animate attributeName="cx" values="1272;1207.4" dur="2.9s" begin="0.7s" repeatCount="indefinite"/><animate attributeName="cy" values="118;140.4" dur="2.9s" begin="0.7s" repeatCount="indefinite"/><animate attributeName="opacity" values=".85;.85;0" keyTimes="0;.8;1" dur="2.9s" begin="0.7s" repeatCount="indefinite"/></circle>
+        <circle r="2.2" fill="#67e8f9" opacity=".85"><animate attributeName="cx" values="1140;1197.9" dur="3.4s" begin="1.4s" repeatCount="indefinite"/><animate attributeName="cy" values="160;121.4" dur="3.4s" begin="1.4s" repeatCount="indefinite"/><animate attributeName="opacity" values=".85;.85;0" keyTimes="0;.8;1" dur="3.4s" begin="1.4s" repeatCount="indefinite"/></circle>
+        <circle r="2.2" fill="#67e8f9" opacity=".85"><animate attributeName="cx" values="1312;1212.0" dur="3.9s" begin="2.1s" repeatCount="indefinite"/><animate attributeName="cy" values="168;168.0" dur="3.9s" begin="2.1s" repeatCount="indefinite"/><animate attributeName="opacity" values=".85;.85;0" keyTimes="0;.8;1" dur="3.9s" begin="2.1s" repeatCount="indefinite"/></circle>
+        <circle r="2.2" fill="#67e8f9" opacity=".85"><animate attributeName="cx" values="1096;1096.1" dur="4.4s" begin="2.8s" repeatCount="indefinite"/><animate attributeName="cy" values="246;245.7" dur="4.4s" begin="2.8s" repeatCount="indefinite"/><animate attributeName="opacity" values=".85;.85;0" keyTimes="0;.8;1" dur="4.4s" begin="2.8s" repeatCount="indefinite"/></circle>
+        <circle r="2.2" fill="#67e8f9" opacity=".85"><animate attributeName="cx" values="1280;1201.9" dur="4.9s" begin="3.5s" repeatCount="indefinite"/><animate attributeName="cy" values="250;207.9" dur="4.9s" begin="3.5s" repeatCount="indefinite"/><animate attributeName="opacity" values=".85;.85;0" keyTimes="0;.8;1" dur="4.9s" begin="3.5s" repeatCount="indefinite"/></circle>
+      </g>
       <circle cx="1128" cy="168" r="95" fill="none" stroke="#22d3ee" stroke-opacity=".22" stroke-width="1" stroke-dasharray="28 16">
         <animateTransform attributeName="transform" type="rotate" values="360 1128 168;0 1128 168" dur="32s" repeatCount="indefinite"/>
       </circle>
       <circle cx="1128" cy="168" r="84" fill="#070c19" fill-opacity=".97" stroke="#8fb3dd" stroke-opacity=".26"/>
       <circle cx="1128" cy="168" r="84" fill="url(#medGlow)"/>
       <circle cx="1128" cy="168" r="84" fill="none" stroke="url(#accent)" stroke-opacity=".45" stroke-width="2"/>
+      <g stroke="#22d3ee" stroke-opacity=".3" stroke-width="1">
+        <line x1="1192.0" y1="168.0" x2="1168.7" y2="184.8"/>
+        <line x1="1179.8" y1="205.6" x2="1144.8" y2="208.7"/>
+        <line x1="1147.8" y1="228.9" x2="1111.2" y2="208.7"/>
+        <line x1="1108.2" y1="228.9" x2="1087.3" y2="184.8"/>
+        <line x1="1076.2" y1="205.6" x2="1087.3" y2="151.2"/>
+        <line x1="1064.0" y1="168.0" x2="1111.2" y2="127.3"/>
+        <line x1="1076.2" y1="130.4" x2="1144.8" y2="127.3"/>
+        <line x1="1108.2" y1="107.1" x2="1168.7" y2="151.2"/>
+        <line x1="1147.8" y1="107.1" x2="1168.7" y2="184.8"/>
+        <line x1="1179.8" y1="130.4" x2="1144.8" y2="208.7"/>
+        <line x1="1192.0" y1="168.0" x2="1168.7" y2="151.2"/>
+        <line x1="1108.2" y1="228.9" x2="1111.2" y2="208.7"/>
+        <line x1="1076.2" y1="130.4" x2="1111.2" y2="127.3"/>
+        <line x1="1179.8" y1="130.4" x2="1168.7" y2="184.8"/>
+        <line x1="1192.0" y1="168.0" x2="1179.8" y2="205.6" stroke-opacity=".18"/>
+        <line x1="1147.8" y1="228.9" x2="1108.2" y2="228.9" stroke-opacity=".18"/>
+        <line x1="1076.2" y1="205.6" x2="1064.0" y2="168.0" stroke-opacity=".18"/>
+        <line x1="1076.2" y1="130.4" x2="1108.2" y2="107.1" stroke-opacity=".18"/>
+        <line x1="1147.8" y1="107.1" x2="1179.8" y2="130.4" stroke-opacity=".18"/>
+      </g>
+      <g fill="#67e8f9" fill-opacity=".75">
+        <circle cx="1192.0" cy="168.0" r="2"/>
+        <circle cx="1179.8" cy="205.6" r="2"/>
+        <circle cx="1147.8" cy="228.9" r="2"/>
+        <circle cx="1108.2" cy="228.9" r="2"/>
+        <circle cx="1076.2" cy="205.6" r="2"/>
+        <circle cx="1064.0" cy="168.0" r="2"/>
+        <circle cx="1076.2" cy="130.4" r="2"/>
+        <circle cx="1108.2" cy="107.1" r="2"/>
+        <circle cx="1147.8" cy="107.1" r="2"/>
+        <circle cx="1179.8" cy="130.4" r="2"/>
+        <circle cx="1168.7" cy="184.8" r="2"/>
+        <circle cx="1144.8" cy="208.7" r="2"/>
+        <circle cx="1111.2" cy="208.7" r="2"/>
+        <circle cx="1087.3" cy="184.8" r="2"/>
+        <circle cx="1087.3" cy="151.2" r="2"/>
+        <circle cx="1111.2" cy="127.3" r="2"/>
+        <circle cx="1144.8" cy="127.3" r="2"/>
+        <circle cx="1168.7" cy="151.2" r="2"/>
+      </g>
+      <g fill="#a855f7">
+        <circle cx="1179.8" cy="205.6" r="2.6" opacity=".25"><animate attributeName="opacity" values=".25;1;.25" dur="2.1s" begin="0.3s" repeatCount="indefinite"/></circle>
+        <circle cx="1076.2" cy="205.6" r="2.6" opacity=".25"><animate attributeName="opacity" values=".25;1;.25" dur="1.6s" begin="1.4s" repeatCount="indefinite"/></circle>
+        <circle cx="1108.2" cy="107.1" r="2.6" opacity=".25"><animate attributeName="opacity" values=".25;1;.25" dur="3.0s" begin="0.7s" repeatCount="indefinite"/></circle>
+        <circle cx="1144.8" cy="208.7" r="2.6" opacity=".25"><animate attributeName="opacity" values=".25;1;.25" dur="3.0s" begin="0.3s" repeatCount="indefinite"/></circle>
+        <circle cx="1087.3" cy="151.2" r="2.6" opacity=".25"><animate attributeName="opacity" values=".25;1;.25" dur="2.5s" begin="1.4s" repeatCount="indefinite"/></circle>
+      </g>
+      <g>
+        <circle r="2.2" fill="#22d3ee" opacity=".9"><animate attributeName="cx" values="1192.0;1168.7" dur="1.4s" begin="0.0s" repeatCount="indefinite"/><animate attributeName="cy" values="168.0;184.8" dur="1.4s" begin="0.0s" repeatCount="indefinite"/></circle>
+        <circle r="2.2" fill="#22d3ee" opacity=".9"><animate attributeName="cx" values="1108.2;1087.3" dur="1.7s" begin="0.6s" repeatCount="indefinite"/><animate attributeName="cy" values="228.9;184.8" dur="1.7s" begin="0.6s" repeatCount="indefinite"/></circle>
+        <circle r="2.2" fill="#22d3ee" opacity=".9"><animate attributeName="cx" values="1076.2;1144.8" dur="2.0s" begin="1.2s" repeatCount="indefinite"/><animate attributeName="cy" values="130.4;127.3" dur="2.0s" begin="1.2s" repeatCount="indefinite"/></circle>
+        <circle r="2.2" fill="#22d3ee" opacity=".9"><animate attributeName="cx" values="1179.8;1144.8" dur="2.3s" begin="1.8s" repeatCount="indefinite"/><animate attributeName="cy" values="130.4;208.7" dur="2.3s" begin="1.8s" repeatCount="indefinite"/></circle>
+      </g>
       <text x="1128" y="191" text-anchor="middle" font-size="62" font-weight="800" letter-spacing="-1" fill="url(#accent)">RD</text>
       <circle cx="1236" cy="168" r="4.6" fill="#67e8f9">
         <animateTransform attributeName="transform" type="rotate" values="0 1128 168;360 1128 168" dur="18s" repeatCount="indefinite"/>
@@ -521,17 +598,17 @@
     <animate attributeName="opacity" values="0;1" begin="1.25s" dur="0.6s" fill="freeze"/>
     <line x1="60" y1="356" x2="1380" y2="356" stroke="#8fb3dd" stroke-opacity=".16"/>
     <rect x="60" y="357" width="1320" height="72" rx="18" fill="#080e1d" fill-opacity=".55" stroke="#7f9dc4" stroke-opacity=".12"/>
-    <text x="90" y="390" text-anchor="middle" font-size="23" font-weight="800" letter-spacing="-.2" fill="#f1f6ff">AI / ML</text>
-    <text x="90" y="411" text-anchor="middle" font-size="9.5" font-weight="700" letter-spacing="2" fill="#8aa2c4">RESEARCH &amp; DEVELOPMENT</text>
-    <text x="450" y="390" text-anchor="middle" font-size="23" font-weight="800" letter-spacing="-.2" fill="#f1f6ff">TYPESCRIPT</text>
-    <text x="450" y="411" text-anchor="middle" font-size="9.5" font-weight="700" letter-spacing="2" fill="#8aa2c4">PRODUCT ENGINEERING</text>
-    <line x1="270" y1="368" x2="270" y2="414" stroke="#7f9dc4" stroke-opacity=".18"/>
-    <text x="810" y="390" text-anchor="middle" font-size="23" font-weight="800" letter-spacing="-.2" fill="#f1f6ff">PYTHON</text>
-    <text x="810" y="411" text-anchor="middle" font-size="9.5" font-weight="700" letter-spacing="2" fill="#8aa2c4">MODELS &amp; PIPELINES</text>
-    <line x1="630" y1="368" x2="630" y2="414" stroke="#7f9dc4" stroke-opacity=".18"/>
-    <text x="1170" y="390" text-anchor="middle" font-size="23" font-weight="800" letter-spacing="-.2" fill="#f1f6ff">WORLDWIDE</text>
-    <text x="1170" y="411" text-anchor="middle" font-size="9.5" font-weight="700" letter-spacing="2" fill="#8aa2c4">OPEN TO COLLABORATE</text>
-    <line x1="990" y1="368" x2="990" y2="414" stroke="#7f9dc4" stroke-opacity=".18"/>
+    <text x="225" y="390" text-anchor="middle" font-size="23" font-weight="800" letter-spacing="-.2" fill="#f1f6ff">AI / ML</text>
+    <text x="225" y="411" text-anchor="middle" font-size="9.5" font-weight="700" letter-spacing="2" fill="#8aa2c4">RESEARCH &amp; DEVELOPMENT</text>
+    <text x="555" y="390" text-anchor="middle" font-size="23" font-weight="800" letter-spacing="-.2" fill="#f1f6ff">TYPESCRIPT</text>
+    <text x="555" y="411" text-anchor="middle" font-size="9.5" font-weight="700" letter-spacing="2" fill="#8aa2c4">PRODUCT ENGINEERING</text>
+    <line x1="390" y1="368" x2="390" y2="414" stroke="#7f9dc4" stroke-opacity=".18"/>
+    <text x="885" y="390" text-anchor="middle" font-size="23" font-weight="800" letter-spacing="-.2" fill="#f1f6ff">PYTHON</text>
+    <text x="885" y="411" text-anchor="middle" font-size="9.5" font-weight="700" letter-spacing="2" fill="#8aa2c4">MODELS &amp; PIPELINES</text>
+    <line x1="720" y1="368" x2="720" y2="414" stroke="#7f9dc4" stroke-opacity=".18"/>
+    <text x="1215" y="390" text-anchor="middle" font-size="23" font-weight="800" letter-spacing="-.2" fill="#f1f6ff">WORLDWIDE</text>
+    <text x="1215" y="411" text-anchor="middle" font-size="9.5" font-weight="700" letter-spacing="2" fill="#8aa2c4">OPEN TO COLLABORATE</text>
+    <line x1="1050" y1="368" x2="1050" y2="414" stroke="#7f9dc4" stroke-opacity=".18"/>
     </g>
 
     <rect x="1" y="1" width="1438" height="428" rx="25" fill="none" stroke="#9db8dd" stroke-opacity=".22"/>
