@@ -235,11 +235,11 @@ def build_terminal() -> str:
   <circle cx="66" cy="23" r="5.6" fill="#28c840"/>
   <text x="{TW / 2:.0f}" y="28" text-anchor="middle" font-family="{MONO}" font-size="12" font-weight="600" letter-spacing=".4" fill="#7d95b5">rishi@dev — zsh — 96×24</text>
   <g font-family="{MONO}" font-size="11" font-weight="600">
-    <rect x="{TW - 156}" y="14" width="136" height="19" rx="9.5" fill="#0a1424" stroke="#2dd4bf" stroke-opacity=".4"/>
-    <circle cx="{TW - 143}" cy="23.5" r="3.4" fill="#2dd4bf">
+    <rect x="{TW - 172}" y="13" width="156" height="20" rx="10" fill="#0a1424" stroke="#2dd4bf" stroke-opacity=".4"/>
+    <circle cx="{TW - 159}" cy="23" r="3.4" fill="#2dd4bf">
       <animate attributeName="opacity" values="1;.25;1" dur="2.2s" repeatCount="indefinite"/>
     </circle>
-    <text x="{TW - 133}" y="27.5" fill="#5eead4">available for work</text>
+    <text x="{TW - 149}" y="27" font-size="10.5" fill="#5eead4">available for work</text>
   </g>
 
 {chr(10).join(body)}
