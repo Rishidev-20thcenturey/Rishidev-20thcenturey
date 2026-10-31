@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1078" height="64" viewBox="0 0 1078 64" role="img" aria-labelledby="st sd">
+  <title id="st">Live status: Kolkata local time, days since the journey started, public repositories, stars and followers</title>
+  <desc id="sd">Regenerated every hour by GitHub Actions from the public GitHub API, so the numbers are always current. Snapshot taken 2026-10-31 12:27 UTC.</desc>
+  <defs>
+    <linearGradient id="sbg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0c1322"/>
+      <stop offset="70%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#08131f"/>
+    </linearGradient>
+    <linearGradient id="sedge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#2dd4bf"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-260 0;260 0;-260 0" dur="8s" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="1076" height="62" rx="16" fill="url(#sbg)" stroke="#8fb3dd" stroke-opacity=".22"/>
+    <circle cx="42" cy="32" r="4.5" fill="#34d399"><animate attributeName="opacity" values="1;.25;1" dur="2s" repeatCount="indefinite"/></circle><circle cx="42" cy="32" r="4.5" fill="none" stroke="#34d399" stroke-opacity=".6"><animate attributeName="r" values="4.5;11" dur="2s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values=".6;0" dur="2s" repeatCount="indefinite"/></circle>
+    <text x="58" y="36" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12.5" font-weight="700" letter-spacing="1.1" fill="#34d399">LIVE</text>
+    <line x1="124" y1="18" x2="124" y2="46" stroke="#7f9dc4" stroke-opacity=".25"/>
+    <text x="149" y="36" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12.5" font-weight="700" letter-spacing="1.1" fill="#7dd3fc">KOLKATA 17:57 IST</text>
+    <line x1="316" y1="18" x2="316" y2="46" stroke="#7f9dc4" stroke-opacity=".25"/>
+    <text x="341" y="36" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12.5" font-weight="700" letter-spacing="1.1" fill="#c4b5fd">DAY 117</text>
+    <line x1="430" y1="18" x2="430" y2="46" stroke="#7f9dc4" stroke-opacity=".25"/>
+    <text x="455" y="36" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12.5" font-weight="700" letter-spacing="1.1" fill="#e2ecfb">17 REPOS</text>
+    <line x1="552" y1="18" x2="552" y2="46" stroke="#7f9dc4" stroke-opacity=".25"/>
+    <text x="577" y="36" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12.5" font-weight="700" letter-spacing="1.1" fill="#fcd34d">24 STARS</text>
+    <line x1="674" y1="18" x2="674" y2="46" stroke="#7f9dc4" stroke-opacity=".25"/>
+    <text x="699" y="36" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="12.5" font-weight="700" letter-spacing="1.1" fill="#5eead4">14 FOLLOWERS</text>
+    <line x1="830" y1="18" x2="830" y2="46" stroke="#7f9dc4" stroke-opacity=".25"/>
+    <text x="844" y="36" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace" font-size="10" font-weight="600" letter-spacing="1.2" fill="#5c7595">REFRESHED HOURLY BY CI</text>
+  <rect x="0" y="60" width="1078" height="4" rx="2" fill="url(#sedge)"/>
+</svg>
